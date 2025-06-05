@@ -1,0 +1,564 @@
+1
+00:00:00,000 --> 00:00:05,000
+Hi, my name is David Brown, and this is a reading writing class.
+
+2
+00:00:07,000 --> 00:00:10,000
+Hello, welcome. How are you?
+
+3
+00:00:10,000 --> 00:00:12,000
+Hi, nice to meet you.
+
+4
+00:00:12,000 --> 00:00:15,000
+Nice to meet you too. My name is David. What's your name?
+
+5
+00:00:15,000 --> 00:00:17,000
+My name is Francesco. Pleasure to meet you, David.
+
+6
+00:00:17,000 --> 00:00:20,000
+Nice to meet you, Francesco. Welcome.
+
+7
+00:00:20,000 --> 00:00:26,000
+I see that you selected a lesson about Walt Whitman and his famous poem,
+
+8
+00:00:26,000 --> 00:00:30,000
+Oh, captain, my captain, a reading and writing class. Is that right?
+
+9
+00:00:30,000 --> 00:00:32,000
+Yes, that is correct.
+
+10
+00:00:32,000 --> 00:00:34,000
+Okay, great.
+
+11
+00:00:34,000 --> 00:00:37,000
+So I'll tell you a little bit about Abraham Lincoln.
+
+12
+00:00:37,000 --> 00:00:43,000
+You've probably heard of honest Abe before he was the 16th US president.
+
+13
+00:00:43,000 --> 00:00:48,000
+He was assassinated in 1865.
+
+14
+00:00:48,000 --> 00:00:53,000
+You might compare him to another famous leader. Do you know who this guy is?
+
+15
+00:00:53,000 --> 00:00:55,000
+Yes, Francisco Morazán.
+
+16
+00:00:55,000 --> 00:01:00,000
+Francisco Morazán. Okay, so they're not the same, but they are very popular presidents, right?
+
+17
+00:01:00,000 --> 00:01:02,000
+Correct. Yes.
+
+18
+00:01:02,000 --> 00:01:05,000
+So this question for us is what makes a good leader?
+
+19
+00:01:05,000 --> 00:01:09,000
+Take a minute to think about it, and then you can share with me and talk about this.
+
+20
+00:01:09,000 --> 00:01:12,000
+What makes a good leader in your opinion?
+
+21
+00:01:12,000 --> 00:01:15,000
+Okay.
+
+22
+00:01:15,000 --> 00:01:18,000
+Do you want me to write it down or can I just start?
+
+23
+00:01:18,000 --> 00:01:21,000
+Yeah, you can.
+
+24
+00:01:21,000 --> 00:01:32,000
+I think it's not only someone that inspires, but also knows when to take action.
+
+25
+00:01:32,000 --> 00:01:34,000
+Okay.
+
+26
+00:01:34,000 --> 00:01:37,000
+Alright, agreed. Somebody with initiative, right?
+
+27
+00:01:37,000 --> 00:01:40,000
+Yes, absolutely.
+
+28
+00:01:40,000 --> 00:01:46,000
+I think both of these leaders were leaders who inspired others and took a great initiative.
+
+29
+00:01:46,000 --> 00:01:47,000
+I would agree.
+
+30
+00:01:47,000 --> 00:01:53,000
+Both of them were involved with some great liberal reforms as well.
+
+31
+00:01:53,000 --> 00:02:05,000
+Alright, so we have a list of things that can help us to improve our English in particular reading and writing and speaking too since we'll be having a conversation throughout the entire lesson.
+
+32
+00:02:05,000 --> 00:02:07,000
+These are our class objectives.
+
+33
+00:02:07,000 --> 00:02:11,000
+Can you read the class objectives starting with this one here?
+
+34
+00:02:11,000 --> 00:02:20,000
+Yes, identify and explain the historical context of O-Captain, My Captain.
+
+35
+00:02:20,000 --> 00:02:22,000
+Define key vocabulary.
+
+36
+00:02:22,000 --> 00:02:25,000
+For example,
+
+37
+00:02:25,000 --> 00:02:27,000
+?legy,
+
+38
+00:02:27,000 --> 00:02:29,000
+keel, rack,
+
+39
+00:02:29,000 --> 00:02:31,000
+or is it
+
+40
+00:02:31,000 --> 00:02:33,000
+elegy.
+
+41
+00:02:33,000 --> 00:02:39,000
+And identify and extend it metaphor within the poem.
+
+42
+00:02:39,000 --> 00:02:48,000
+Analyze the extended metaphor, explaining what the captain, ship, fearful trip and prize represent.
+
+43
+00:02:48,000 --> 00:02:53,000
+Discuss the tone of the poem as it relates to grief and admiration.
+
+44
+00:02:53,000 --> 00:02:58,000
+And express understanding of the poem through discussion and written responses.
+
+45
+00:02:58,000 --> 00:03:00,000
+Okay.
+
+46
+00:03:00,000 --> 00:03:11,000
+Oh, and connect the poem's themes of loss, leadership, and national strategy to broader concepts of freedom.
+
+47
+00:03:11,000 --> 00:03:12,000
+Is it a freedom?
+
+48
+00:03:12,000 --> 00:03:13,000
+Like freedom.
+
+49
+00:03:13,000 --> 00:03:14,000
+Yeah.
+
+50
+00:03:14,000 --> 00:03:15,000
+Oh, like freedom.
+
+51
+00:03:15,000 --> 00:03:16,000
+Yeah.
+
+52
+00:03:16,000 --> 00:03:18,000
+Alright, so we have a lot that we can do.
+
+53
+00:03:18,000 --> 00:03:23,000
+We might not have time to do all of this, but certainly there is a lot to digest about this poem.
+
+54
+00:03:23,000 --> 00:03:28,000
+And well, well, Whitman and historical context here.
+
+55
+00:03:28,000 --> 00:03:38,000
+The vocabulary can be a little bit antiquated because it's, it was written in 1865 right after the assassination of Abraham Lincoln.
+
+56
+00:03:38,000 --> 00:03:41,000
+So I just want you to keep that in mind as we read this.
+
+57
+00:03:41,000 --> 00:03:43,000
+There's a context to this poem.
+
+58
+00:03:43,000 --> 00:03:47,000
+And maybe it's talking about something a little deeper.
+
+59
+00:03:47,000 --> 00:03:52,000
+So when we say extended metaphor, you know, a metaphor is when A is B.
+
+60
+00:03:52,000 --> 00:04:01,000
+But an extended metaphor is when maybe a whole paragraph or text is standing for something.
+
+61
+00:04:01,000 --> 00:04:02,000
+Okay.
+
+62
+00:04:02,000 --> 00:04:05,000
+So some historical context here.
+
+63
+00:04:05,000 --> 00:04:11,000
+But first here, what do you know about the American Civil War or Abraham Lincoln?
+
+64
+00:04:11,000 --> 00:04:14,000
+Oh, I know, I know the nickname honest Abe.
+
+65
+00:04:15,000 --> 00:04:20,000
+(The) American Civil War was specifically regarding slavery.
+
+66
+00:04:20,000 --> 00:04:22,000
+If I'm not mistaken, correct?
+
+67
+00:04:22,000 --> 00:04:23,000
+Yes.
+
+68
+00:04:23,000 --> 00:04:25,000
+North and the South.
+
+69
+00:04:25,000 --> 00:04:29,000
+And then Abraham Lincoln.
+
+70
+00:04:29,000 --> 00:04:35,000
+Well, you said the 16th president, but I think there's something.
+
+71
+00:04:35,000 --> 00:04:39,000
+I think there was a very important decision he took and I can't quite remember it.
+
+72
+00:04:39,000 --> 00:04:43,000
+Something that he's really known about.
+
+73
+00:04:43,000 --> 00:04:45,000
+The emancipation proclamation.
+
+74
+00:04:45,000 --> 00:04:46,000
+Yeah.
+
+75
+00:04:46,000 --> 00:04:47,000
+All right.
+
+76
+00:04:47,000 --> 00:04:48,000
+All right.
+
+77
+00:04:48,000 --> 00:04:49,000
+Excellent.
+
+78
+00:04:49,000 --> 00:04:53,000
+So you know some about the American Civil War in the context of this poem.
+
+79
+00:04:53,000 --> 00:04:56,000
+How important this was the Civil War in the United States.
+
+80
+00:04:56,000 --> 00:05:01,000
+Didn't just affect the United States had a cascade effect to other countries.
+
+81
+00:05:01,000 --> 00:05:05,000
+And really changed a lot of attitudes.
+
+82
+00:05:05,000 --> 00:05:09,000
+And it wasn't over at the end of the Civil War.
+
+83
+00:05:09,000 --> 00:05:10,000
+And it's still not over.
+
+84
+00:05:10,000 --> 00:05:13,000
+Really, we still fight with inequality.
+
+85
+00:05:13,000 --> 00:05:19,000
+We still fight with issues related to slavery around the world.
+
+86
+00:05:19,000 --> 00:05:24,000
+And this question about what it really means to be free.
+
+87
+00:05:24,000 --> 00:05:29,000
+And it's still an uphill battle.
+
+88
+00:05:29,000 --> 00:05:36,000
+So we what Whitman wrote, oh, captain, my captain in 1865 shortly after two major events here.
+
+89
+00:05:36,000 --> 00:05:39,000
+Can you read this part for us?
+
+90
+00:05:39,000 --> 00:05:46,000
+Of course, the end of the Civil War, which lasted from 1861 to 1865.
+
+91
+00:05:46,000 --> 00:05:49,000
+A rural conflict that divided the nation.
+
+92
+00:05:49,000 --> 00:06:00,000
+And the assassination of President Abraham Abraham Lincoln in April 1865 just days after the Confederates surrender.
+
+93
+00:06:00,000 --> 00:06:05,000
+Lincoln was seen by many as the captain who had steered the nation.
+
+94
+00:06:05,000 --> 00:06:11,000
+the ship... through the fearful trip of the war.
+
+95
+00:06:11,000 --> 00:06:17,000
+So we see an example of a metaphor already the nation as the ship he steered it he was the captain.
+
+96
+00:06:17,000 --> 00:06:19,000
+in this poem that we're going to read.
+
+97
+00:06:19,000 --> 00:06:24,000
+So that we have another colored picture of Abraham Lincoln.
+
+98
+00:06:24,000 --> 00:06:28,000
+I just think it's cool that they can put color to old pictures now.
+
+99
+00:06:28,000 --> 00:06:30,000
+And it makes it look real.
+
+100
+00:06:30,000 --> 00:06:35,000
+And a scene from something that you would have seen in the newspaper.
+
+101
+00:06:35,000 --> 00:06:43,000
+So Abraham Lincoln was in a theater when he was shot and assassinated.
+
+102
+00:06:43,000 --> 00:06:44,000
+All right.
+
+103
+00:06:44,000 --> 00:06:48,000
+So here we have some terms that we need to know.
+
+104
+00:06:48,000 --> 00:06:52,000
+And you might hesitate with some of these vocabulary words.
+
+105
+00:06:52,000 --> 00:06:54,000
+They're a little difficult.
+
+106
+00:06:54,000 --> 00:06:59,000
+So we have lyric, elegy, metaphor and extended metaphor.
+
+107
+00:06:59,000 --> 00:07:04,000
+Lyric poetry is poetry that expresses personal emotions or feelings.
+
+108
+00:07:04,000 --> 00:07:06,000
+It's typically spoken in the first person.
+
+109
+00:07:06,000 --> 00:07:10,000
+So the poem that we're about to read is lyric poetry.
+
+110
+00:07:10,000 --> 00:07:15,000
+And this one, remember the pronunciation, elegy, could you read this for us?
+
+111
+00:07:15,000 --> 00:07:16,000
+Yes.
+
+112
+00:07:16,000 --> 00:07:22,000
+A poem of serious reflection, typically a lament for the dead.
+
+113
+00:07:22,000 --> 00:07:27,000
+Oh, captain, my captain is an elegy for Abraham Lincoln.
+
+114
+00:07:27,000 --> 00:07:28,000
+All right.
+
+115
+00:07:28,000 --> 00:07:32,000
+So we're talking about someone a captain who was killed.
+
+116
+00:07:32,000 --> 00:07:34,000
+And so the poem is really deep.
+
+117
+00:07:34,000 --> 00:07:37,000
+And it's a little dark in that sense.
+
+118
+00:07:37,000 --> 00:07:41,000
+You have to imagine the feeling at the end of a war.
+
+119
+00:07:41,000 --> 00:07:45,000
+The feeling at the end of the war is one of relief.
+
+120
+00:07:45,000 --> 00:07:48,000
+you could imagine, but also great sadness.
+
+121
+00:07:48,000 --> 00:07:52,000
+You can't bring back the lives that were lost.
+
+122
+00:07:52,000 --> 00:07:54,000
+You can't undo what was done.
+
+123
+00:07:54,000 --> 00:07:58,000
+What was done was done.
+
+124
+00:07:58,000 --> 00:08:03,000
+We have a metaphor, a figure of speech in which a word or phrase is applied.
+
+125
+00:08:03,000 --> 00:08:10,000
+So when one thing is another, and then this extension of that, the extended metaphor.
+
+126
+00:08:10,000 --> 00:08:12,000
+Could you read this one for us?
+
+127
+00:08:12,000 --> 00:08:13,000
+Yes.
+
+128
+00:08:13,000 --> 00:08:19,000
+A metaphor that is developed over several lines of writing or even throughout an entire work.
+
+129
+00:08:19,000 --> 00:08:21,000
+Great.
+
+130
+00:08:21,000 --> 00:08:25,000
+So here's the first reading.
+
+131
+00:08:25,000 --> 00:08:27,000
+I'll read this first one for you.
+
+132
+00:08:27,000 --> 00:08:33,000
+I want you to listen to the way that this sounds.
+
+133
+00:08:33,000 --> 00:08:36,000
+While follow eyes and steady keel.
+
+134
+00:08:36,000 --> 00:08:39,000
+The vessel grim and daring.
+
+135
+00:08:39,000 --> 00:08:42,000
+But oh, heart, heart, heart.
+
+136
+00:08:42,000 --> 00:08:45,000
+Oh, the bleeding drops of red.
+
+137
+00:08:45,000 --> 00:08:52,000
+Where on the deck, my captain lies, fallen cold and dead.
+
+138
+00:08:52,000 --> 00:08:58,000
+So we have this image of a ship with a keel.
+
+139
+00:08:58,000 --> 00:09:00,000
+So certain part of the ship, right?
+
+140
+00:09:00,000 --> 00:09:01,000
+The vessel grim and daring.
+
+141
+00:09:01,000 --> 00:09:05,000
+You see this dark ship entering.
+
