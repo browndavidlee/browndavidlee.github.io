@@ -249,7 +249,8 @@
             color: var(--sidebar-text);
         }
 
-        #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn, #playVideoIntroBtn, #generateFollowUpBtn, #openQuizBtn {
+        /* === MODIFICATION START: Added #viewPortfolioBtn to the selector list === */
+        #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn, #playVideoIntroBtn, #generateFollowUpBtn, #openQuizBtn, #viewPortfolioBtn {
             background: var(--sidebar-text);
             color: var(--primary);
             border: 1px solid var(--primary);
@@ -265,27 +266,30 @@
             will-change: transform, background-color, box-shadow;
         }
         #darkModeToggle:hover, #printResumeBtn:hover, #toggleConciseModeBtn:hover,
-        #playVideoIntroBtn:hover, #generateFollowUpBtn:hover, #openQuizBtn:hover {
+        #playVideoIntroBtn:hover, #generateFollowUpBtn:hover, #openQuizBtn:hover, #viewPortfolioBtn:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         #darkModeToggle:active, #printResumeBtn:active, #toggleConciseModeBtn:active,
-        #playVideoIntroBtn:active, #generateFollowUpBtn:active, #openQuizBtn:active {
+        #playVideoIntroBtn:active, #generateFollowUpBtn:active, #openQuizBtn:active, #viewPortfolioBtn:active {
             transform: translateY(0px);
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
         }
 
         body.dark-mode #darkModeToggle, body.dark-mode #printResumeBtn, body.dark-mode #toggleConciseModeBtn,
-        body.dark-mode #playVideoIntroBtn, body.dark-mode #generateFollowUpBtn, body.dark-mode #openQuizBtn {
+        body.dark-mode #playVideoIntroBtn, body.dark-mode #generateFollowUpBtn, body.dark-mode #openQuizBtn, body.dark-mode #viewPortfolioBtn {
             background: var(--primary);
             color: var(--sidebar-text);
             border-color: var(--sidebar-text);
         }
+        /* === MODIFICATION END === */
+
         #darkModeToggle { margin-bottom: 0.5rem; }
         #toggleConciseModeBtn { margin-bottom: 0.5rem; }
         #playVideoIntroBtn { margin-bottom: 0.5rem; }
         #generateFollowUpBtn { margin-bottom: 0.5rem; }
-        #openQuizBtn { margin-bottom: 1.5rem; }
+        #openQuizBtn { margin-bottom: 0.5rem; } /* Adjusted margin */
+        #viewPortfolioBtn { margin-bottom: 1.5rem; } /* New button margin */
 
 
         .citizenship-tag {
@@ -2540,6 +2544,15 @@
             <button id="playVideoIntroBtn" data-translate-key="playVideoIntro" data-translate-key-aria="ariaPlayVideoIntro">Play Video Intro</button>
             <button id="generateFollowUpBtn" data-translate-key="generateFollowUp" data-translate-key-aria="ariaGenerateFollowUp">Suggest Follow-Up</button>
             <button id="openQuizBtn" data-translate-key="openQuiz" data-translate-key-aria="ariaOpenQuiz">Quick Skill Quiz</button>
+            
+            <!-- === MODIFICATION START: Added new button to link to portfolio === -->
+            <button id="viewPortfolioBtn" 
+                    data-translate-key="viewPortfolio" 
+                    data-translate-key-aria="ariaViewPortfolio" 
+                    onclick="window.open('index.html', '_blank');">
+                View TESOL Portfolio
+            </button>
+            <!-- === MODIFICATION END === -->
 
 
             <section class="contact-section" aria-labelledby="contact-info-heading">
@@ -3128,7 +3141,12 @@
             elp8KeyConcepts: "Innovation, Transcendence, Creation",
             elp8Description: "Transcending existing knowledge to create novel solutions.",
             elp8StudentFocus: "Transform, Innovate, Create, Transcend",
-            elp8TeacherFocus: "Innovate, Facilitate Expertise"
+            elp8TeacherFocus: "Innovate, Facilitate Expertise",
+            
+            // === MODIFICATION START: Added translation for new button ===
+            viewPortfolio: "View TESOL Portfolio",
+            ariaViewPortfolio: "View TESOL Certification Portfolio"
+            // === MODIFICATION END ===
         },
         es: {
             quizCorrectLabel: "Correcto",
@@ -3474,7 +3492,12 @@
             elp8KeyConcepts: "Innovación, Trascendencia, Creación",
             elp8Description: "Transcender conocimiento existente para crear soluciones novedosas.",
             elp8StudentFocus: "Transformar, Innovar, Crear, Trascender",
-            elp8TeacherFocus: "Innovar, Facilitar Pericia"
+            elp8TeacherFocus: "Innovar, Facilitar Pericia",
+
+            // === MODIFICATION START: Added translation for new button ===
+            viewPortfolio: "Ver Portafolio TESOL",
+            ariaViewPortfolio: "Ver Portafolio de Certificación TESOL"
+            // === MODIFICATION END ===
         },
         fr: {
             quizCorrectLabel: "Correct",
@@ -3574,7 +3597,7 @@
             languagesHeading: "Langues",
             langEnglish: "Anglais",
             langFrench: "Français",
-            langSpanish: "Español",
+            langSpanish: "Espagnol",
             proficiencyNative: "Natif",
             proficiencyProfWorking: "Compétence professionnelle opérationnelle",
             proficiencyFullProf: "Compétence professionnelle complète",
@@ -3585,156 +3608,153 @@
             summaryHeading: "Résumé",
             eslEflTooltip: "Anglais langue seconde / langue étrangère",
             wordCloudAlt: "Nuage de mots : philosophie d'enseignement",
-            instructionalStagesHeading: "Teorías de Etapas Instruccionales",
-            instructionalStagesAlt: "Diagrama de Teorías de Etapas Instruccionales",
+            instructionalStagesHeading: "Théories des Stades Pédagogiques",
+            instructionalStagesAlt: "Diagramme des Théories des Stades Pédagogiques",
             zoomHint: "Cliquez sur l'image pour l'afficher en plein écran",
             mapSectionTitle: "Expérience d'Enseignement Mondiale",
             mapSectionIntro: "Carte interactive mettant en évidence les pays où l'enseignement a été dispensé à des étudiants.",
             mapCountriesRepresented: "Pays Représentés :",
             taughtStudentsFromCountry: "Enseigné à des étudiants de ce pays.",
-            experienceHeading: "Experiencia",
-            detailsContactsHeading: "Detalles y Contactos",
-            showDetailsContacts: "Mostrar Detalles y Contactos",
-            showSummary: "Mostrar Resumen",
-            phoneStrong: "Teléfono:",
-            websiteStrong: "Sitio Web:",
-            emailStrong: "Correo electrónico:",
-            staffmarkPhoneStrong: "Teléfono Staffmark:",
-            staffmarkWebsiteStrong: "Sitio Web Staffmark:",
-            aarPhoneFormerStrong: "Teléfono AAR (Anterior):",
-            aarWebsiteStrong: "Sitio Web AAR:",
-            phoneFormerStrong: "Teléfono (Anterior):",
-            locationRemote: "Remoto",
-            jobTitleESLTeacherEBHTemp: "Docente de Inglés como Segunda Lengua",
-            showDetailsContactsAriaEBHTemp: "Mostrar detalles y contactos de Escuela Bilingüe Honduras",
-            detailEBHTemp1: "Instruye a estudiantes de 7º y 8º grado en literatura y gramática inglesa, desarrollando el pensamiento crítico y la competencia lingüística.",
-            detailEBHTemp2: "Aplica estrategias pedagógicas basadas en evidencia, incluyendo aprendizaje multimodal y andamiaje cognitivo, para mejorar la comprensión y participación de los estudiantes.",
-            showSummaryAriaEBHTemp: "Mostrar resumen de Escuela Bilingüe Honduras",
-            jobTitleESLTeacherLatinHire: "Docente de Inglés como Segunda Lengua",
-            showDetailsContactsAriaLatinHire: "Mostrar detalles y contactos de LatinHire",
-            detailLatinHire1: "Impartió instrucción dinámica de inglés en línea a diversas poblaciones estudiantiles internacionales (más de 24,000 sesiones).",
-            detailLatinHire2: "Utilizó diversas herramientas digitales y plataformas interactivas para crear experiencias de aprendizaje atractivas y efectivas basadas en metodologías comunicativas y basadas en tareas.",
-            detailLatinHire3: "Nota: LatinHire es un contratista principal de OpenEnglish, una plataforma líder de aprendizaje de inglés en línea.",
-            showSummaryAriaLatinHire: "Mostrar resumen de LatinHire",
-            jobTitleESLTeacherIHCI: "Docente de Inglés como Segunda Lengua",
-            showDetailsContactsAriaIHCI: "Mostrar detalles y contactos del Instituto Hondureño de Cultura Interamericana",
-            detailIHCI1: "Impartió clases de inglés como segunda lengua (<span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipESLFull\">ESL</span>) a diversos grupos de edad, implementando eficazmente metodologías de enseñanza interactivas y comunicativas.",
-            detailIHCI2: "Fomentó la adquisición del lenguaje a través de actividades centradas en el estudiante y la aplicación en el mundo real, adaptándose a las limitaciones de recursos.",
-            showSummaryAriaIHCI: "Mostrar resumen del Instituto Hondureño de Cultura Interamericana",
-            jobTitleESLTeacherAEH: "Docente de Inglés como Segunda Lengua",
-            showDetailsContactsAriaAEH: "Mostrar detalles y contactos de Academia Europea Honduras",
-            detailAEH1: "Proporcionó instrucción específica del idioma inglés, enfatizando las habilidades prácticas de comunicación y el desarrollo de la fluidez.",
-            detailAEH2: "Escuela mixta en Comayagua, Honduras, que requiere enfoques de enseñanza ingeniosos.",
-            showSummaryAriaAEH: "Mostrar resumen de Academia Europea Honduras",
-            jobTitleEngagementSpecStartek: "Especialista en Interacción con Clientes (Perfil de Supervisor)",
-            showDetailsContactsAriaStartek: "Mostrar detalles y contactos de Startek",
-            detailStartek1: "Resolvió quejas de clientes, problemas técnicos y consultas de facturación en un entorno de centro de llamadas de alto volumen.",
-            detailStartek2: "Mejoró el valor para el cliente promocionando servicios y planes telefónicos relevantes.",
-            detailStartek3: "Gestionó llamadas derivadas a un nivel superior (escalated calls) con un perfil de supervisor, demostrando habilidades avanzadas de resolución de problemas y comunicación.",
-            showSummaryAriaStartek: "Mostrar resumen de Startek",
-            jobTitleContractorStaffmark: "Contratista (Control de Producción y Encargado de Repuestos)",
-            showDetailsContactsAriaStaffmark: "Mostrar detalles y contactos de Staffmark",
-            detailStaffmark1: "Ejecutó funciones de control de producción y tareas de encargado de repuestos para <span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipAAR\">AAR</span> Aircraft Services.",
-            detailStaffmark2: "Completó diversas asignaciones operativas para Window Mart.",
-            detailStaffmark3: "Nota: AAR Aircraft Services-Hot Springs está permanentemente cerrado.",
-            showSummaryAriaStaffmark: "Mostrar resumen de Staffmark",
-            jobTitlePartsClerkAAR: "Encargado de Repuestos",
-            showDetailsContactsAriaAARParts: "Mostrar detalles y contactos de AAR (Encargado de Repuestos)",
-            detailAARParts1: "Coordinó el transporte de herramientas y repuestos de mantenimiento de aeronaves entre almacenes y hangares.",
-            detailAARParts2: "Aseguró la disponibilidad oportuna de los componentes necesarios para los programas de mantenimiento de aeronaves.",
-            detailAARParts3: "Nota: AAR Aircraft Services-Hot Springs está permanentemente cerrado.",
-            showSummaryAriaAARParts: "Mostrar resumen de AAR (Encargado de Repuestos)",
-            jobTitleProdControlAAR: "Controlador de Producción",
-            showDetailsContactsAriaAARProd: "Mostrar detalles y contactos de AAR (Controlador de Producción)",
-            detailAARProd1: "Ensured meticulous data entry and rigorous inspection of aircraft maintenance paperwork (<span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipCRJ\">CRJ</span> 200/700) per <span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipFAA\">FAA</span> requirements.",
-            detailAARProd2: "Generated comprehensive reports and tracked workflow efficiently using spreadsheets.",
-            detailAARProd3: "Organized, tracked, and generated work orders, coordinating effectively with lead mechanics, project managers, and inspection teams.",
-            detailAARProd4: "Managed critical documentation, including sorting, organizing, and scanning records.",
-            detailAARProd5: "Note: AAR Aircraft Services-Hot Springs is permanently closed.",
-            showSummaryAriaAARProd: "Show summary for AAR (Production Controller)",
-            jobTitleGenLaborerWM: "Obrero General",
-            showDetailsContactsAriaWM: "Show details and contacts for Window Mart",
-            detailWM1: "Performed various general labor tasks supporting window manufacturing and installation processes.",
-            showSummaryAriaWM: "Show summary for Window Mart",
-            educationHeading: "Education",
-            eduPsychology: "Psychology (Coursework)",
-            eduPsychologyDetail: "Coursework focused on psychology, informing my understanding of cognitive processes in learning.",
-            eduHighSchool: "High School Diploma",
-            eduElectives: "Electives in multimedia and computer science.",
-            certificationsHeading: "Certifications & Ongoing Professional Development",
-            certASUTESOL1Completed: "Arizona State University: Teach English Now! Foundational Principles (<span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipTESOLFull\">TESOL</span> Certificate Course 1 of 3) (Completed)",
-            certASUTESOL2Completed: "Arizona State University: Teach English Now! Theories of Second Language Acquisition (<span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipTESOLFull\">TESOL</span> Certificate Course 2 of 3) (Completed)",
-            certASUTESOLPending: "<em>Arizona State University: ¡Enseña Inglés Ahora! Proyecto Final 2 (Pendiente)</em>",
-            certCorpTrainingFoundations: "Fundamentos de la Capacitación Corporativa",
-            certInclusiveID: "Diseño Instruccional Inclusivo",
-            certBrainBasedElearning: "Diseño de E-learning Basado en el Cerebro",
-            certNeuroscienceLAndD: "Uso de la Neurociencia para un Aprendizaje y Desarrollo más Efectivos",
-            certIDNeedsAnalysisLI: "Diseño Instruccional: Análisis de Necesidades (LinkedIn)",
-            certIDModelsLI: "Fundamentos del Diseño Instruccional: Modelos de DI (LinkedIn)",
-            certElearningStoryboardingLI: "Fundamentos del E-learning: Storyboarding (LinkedIn)",
-            certIDAdultLearnersLI: "Diseño Instruccional: Aprendices Adultos (LinkedIn)",
-            certIDWorkingSMEsLI: "Diseño Instruccional: Trabajo con Expertos en la Materia (SME) (LinkedIn)",
-            certAgileIDLI: "Diseño Instruccional Ágil (LinkedIn)",
-            certBecomeIDLI: "Conviértete en Diseñador Instruccional (LinkedIn)",
-            certMeasureLearningEffectivenessLI: "Medición de la Efectividad del Aprendizaje (LinkedIn)",
-            certLeadingEILI: "Liderazgo con Inteligencia Emocional (LinkedIn)",
-            certConflictResolutionLI: "Fundamentos de la Resolución de Conflictos (LinkedIn)",
-            certTrainingStoriesLI: "Capacitación con Historias (LinkedIn)",
-            certTeachOnlineLI: "Aprendiendo a Enseñar en Línea (LinkedIn)",
-            certAnalyticsLearningProgLI: "Aplicación de Analíticas a tu Programa de Aprendizaje (LinkedIn)",
-            certDevCourseDesignSkillsLI: "Desarrolla tus Habilidades de Diseño de Cursos e Instrucción (LinkedIn)",
-            certPythonEverybody: "Programación para Todos (Comenzando con Python)",
-            certOxfordContemporaryClassroom: "\"El Aula Contemporánea\" (Presentación del Día de Oxford) - Oxford University Press, Julio 2019",
-            certMacmillanTechEngAcq: "Tecnología y Adquisición del Idioma Inglés y El uso de Libros de Texto en el Aula de Inglés del Siglo XXI (Taller de Desarrollo Profesional) - Macmillan Education & IHCI, Septiembre 2019",
-            backToTop: "Ir arriba",
-            ariaBackToTop: "Desplazarse al inicio de la página",
-            prevSectionAria: "Sección anterior",
-            nextSectionAria: "Sección siguiente",
-            goToSlideAria: "Ir a la diapositiva",
-            copied: "¡Copiado!",
-            noData: "No hay preguntas disponibles.",
-            tooltipAAR: "AAR Corp. - Compañía de Servicios de Aviación",
+            experienceHeading: "Expérience",
+            detailsContactsHeading: "Détails et Contacts",
+            showDetailsContacts: "Afficher Détails & Contacts",
+            showSummary: "Afficher Résumé",
+            phoneStrong: "Tél :",
+            websiteStrong: "Site Web :",
+            emailStrong: "E-mail :",
+            staffmarkPhoneStrong: "Tél Staffmark :",
+            staffmarkWebsiteStrong: "Site Web Staffmark :",
+            aarPhoneFormerStrong: "Tél AAR (Ancien) :",
+            aarWebsiteStrong: "Site Web AAR :",
+            phoneFormerStrong: "Tél (Ancien) :",
+            locationRemote: "À distance",
+            jobTitleESLTeacherEBHTemp: "Professeur d'anglais langue seconde",
+            showDetailsContactsAriaEBHTemp: "Afficher les détails et contacts pour Escuela Bilingüe Honduras",
+            detailEBHTemp1: "Instruit les élèves de 7e et 8e année en littérature et grammaire anglaises, développant la pensée critique et la compétence linguistique.",
+            detailEBHTemp2: "Applique des stratégies pédagogiques basées sur des preuves, y compris l'apprentissage multimodal et l'échafaudage cognitif, pour améliorer la compréhension et l'engagement des élèves.",
+            showSummaryAriaEBHTemp: "Afficher le résumé pour Escuela Bilingüe Honduras",
+            jobTitleESLTeacherLatinHire: "Professeur d'anglais langue seconde",
+            showDetailsContactsAriaLatinHire: "Afficher les détails et contacts pour LatinHire",
+            detailLatinHire1: "A dispensé un enseignement dynamique de l'anglais en ligne à diverses populations d'étudiants internationaux (plus de 24 000 sessions).",
+            detailLatinHire2: "A utilisé divers outils numériques et plateformes interactives pour créer des expériences d'apprentissage engageantes et efficaces basées sur des méthodologies communicatives et basées sur les tâches.",
+            detailLatinHire3: "Note : LatinHire est un contractant principal pour OpenEnglish, une plateforme d'apprentissage de l'anglais en ligne de premier plan.",
+            showSummaryAriaLatinHire: "Afficher le résumé pour LatinHire",
+            jobTitleESLTeacherIHCI: "Professeur d'anglais langue seconde",
+            showDetailsContactsAriaIHCI: "Afficher les détails et contacts pour l'Instituto Hondureño de Cultura Interamericana",
+            detailIHCI1: "A éduqué divers groupes d'âge en <span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipESLFull\">ALS</span>, en mettant en œuvre efficacement des méthodologies d'enseignement interactives et communicatives.",
+            detailIHCI2: "A favorisé l'acquisition de la langue par des activités centrées sur l'étudiant et une application concrète, en s'adaptant aux limitations des ressources.",
+            showSummaryAriaIHCI: "Afficher le résumé pour l'Instituto Hondureño de Cultura Interamericana",
+            jobTitleESLTeacherAEH: "Professeur d'anglais langue seconde",
+            showDetailsContactsAriaAEH: "Afficher les détails et contacts pour l'Academia Europea Honduras",
+            detailAEH1: "A fourni un enseignement ciblé de la langue anglaise, en mettant l'accent sur les compétences de communication pratiques et le développement de la fluidité.",
+            detailAEH2: "École mixte à Comayagua, Honduras, nécessitant des approches pédagogiques ingénieuses.",
+            showSummaryAriaAEH: "Afficher le résumé pour l'Academia Europea Honduras",
+            jobTitleEngagementSpecStartek: "Spécialiste de l'Engagement/Profil de Superviseur",
+            showDetailsContactsAriaStartek: "Afficher les détails et contacts pour Startek",
+            detailStartek1: "A résolu les plaintes des clients, les problèmes techniques et les demandes de facturation dans un centre d'appels à fort volume.",
+            detailStartek2: "A amélioré la valeur client en promouvant des services et des forfaits téléphoniques pertinents.",
+            detailStartek3: "A géré les appels escaladés avec un profil de superviseur, démontrant des compétences avancées en résolution de problèmes et en communication.",
+            showSummaryAriaStartek: "Afficher le résumé pour Startek",
+            jobTitleContractorStaffmark: "Contractuel (Contrôle de Production / Commis aux Pièces)",
+            showDetailsContactsAriaStaffmark: "Afficher les détails et contacts pour Staffmark",
+            detailStaffmark1: "A exécuté des fonctions de contrôle de la production et des tâches de commis aux pièces pour <span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipAAR\">AAR</span> Aircraft Services.",
+            detailStaffmark2: "A effectué diverses missions opérationnelles pour Window Mart.",
+            detailStaffmark3: "Note : AAR Aircraft Services-Hot Springs est définitivement fermé.",
+            showSummaryAriaStaffmark: "Afficher le résumé pour Staffmark",
+            jobTitlePartsClerkAAR: "Commis aux Pièces",
+            showDetailsContactsAriaAARParts: "Afficher les détails et contacts pour AAR (Commis aux Pièces)",
+            detailAARParts1: "A coordonné le transport des outils et des pièces de maintenance d'aéronefs entre les entrepôts et les hangars.",
+            detailAARParts2: "A assuré la disponibilité en temps opportun des composants nécessaires aux calendriers de maintenance des aéronefs.",
+            detailAARParts3: "Note : AAR Aircraft Services-Hot Springs est définitivement fermé.",
+            showSummaryAriaAARParts: "Afficher le résumé pour AAR (Commis aux Pièces)",
+            jobTitleProdControlAAR: "Contrôleur de Production",
+            showDetailsContactsAriaAARProd: "Afficher les détails et contacts pour AAR (Contrôleur de Production)",
+            detailAARProd1: "A assuré une saisie de données méticuleuse et une inspection rigoureuse des documents de maintenance des aéronefs (<span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipCRJ\">CRJ</span> 200/700) conformément aux exigences de la <span class=\"tooltip-trigger\" tabindex=\"0\" data-tooltip-key=\"tooltipFAA\">FAA</span>.",
+            detailAARProd2: "A généré des rapports complets et suivi efficacement le flux de travail à l'aide de feuilles de calcul.",
+            detailAARProd3: "A organisé, suivi et généré des ordres de travail, en coordination efficace avec les mécaniciens principaux, les chefs de projet et les équipes d'inspection.",
+            detailAARProd4: "A géré la documentation critique, y compris le tri, l'organisation et la numérisation des dossiers.",
+            detailAARProd5: "Note : AAR Aircraft Services-Hot Springs est définitivement fermé.",
+            showSummaryAriaAARProd: "Afficher le résumé pour AAR (Contrôleur de Production)",
+            jobTitleGenLaborerWM: "Ouvrier Général",
+            showDetailsContactsAriaWM: "Afficher les détails et contacts pour Window Mart",
+            detailWM1: "A effectué diverses tâches de main-d'œuvre générale pour soutenir les processus de fabrication et d'installation de fenêtres.",
+            showSummaryAriaWM: "Afficher le résumé pour Window Mart",
+            educationHeading: "Formation",
+            eduPsychology: "Psychologie (Cursus)",
+            eduPsychologyDetail: "Cursus axé sur la psychologie, éclairant ma compréhension des processus cognitifs dans l'apprentissage.",
+            eduHighSchool: "Diplôme d'études secondaires",
+            eduElectives: "Options en multimédia et en informatique.",
+            certificationsHeading: "Certifications et Développement Professionnel Continu",
+            certCorpTrainingFoundations: "Fondements de la Formation en Entreprise",
+            certInclusiveID: "Conception Pédagogique Inclusive",
+            certBrainBasedElearning: "Conception d'E-learning Basée sur le Cerveau",
+            certNeuroscienceLAndD: "Utiliser les Neurosciences pour un L&D Plus Efficace",
+            certIDNeedsAnalysisLI: "Conception Pédagogique : Analyse des Besoins (LinkedIn)",
+            certIDModelsLI: "Essentiels de la Conception Pédagogique : Modèles de CP (LinkedIn)",
+            certElearningStoryboardingLI: "Essentiels de l'E-learning : Storyboarding (LinkedIn)",
+            certIDAdultLearnersLI: "Conception Pédagogique : Apprenants Adultes (LinkedIn)",
+            certIDWorkingSMEsLI: "Conception Pédagogique : Travailler avec des Experts (SME) (LinkedIn)",
+            certAgileIDLI: "Conception Pédagogique Agile (LinkedIn)",
+            certBecomeIDLI: "Devenir Concepteur Pédagogique (LinkedIn)",
+            certMeasureLearningEffectivenessLI: "Mesurer l'Efficacité de l'Apprentissage (LinkedIn)",
+            certLeadingEILI: "Diriger avec l'Intelligence Émotionnelle (LinkedIn)",
+            certConflictResolutionLI: "Fondements de la Résolution de Conflits (LinkedIn)",
+            certTrainingStoriesLI: "Former avec des Histoires (LinkedIn)",
+            certTeachOnlineLI: "Apprendre à Enseigner en Ligne (LinkedIn)",
+            certAnalyticsLearningProgLI: "Appliquer l'Analyse à Votre Programme d'Apprentissage (LinkedIn)",
+            certDevCourseDesignSkillsLI: "Développez Vos Compétences en Conception de Cours et Pédagogie (LinkedIn)",
+            certPythonEverybody: "Programmation pour Tous (Débuter avec Python)",
+            certOxfordContemporaryClassroom: "\"La Salle de Classe Contemporaine\" (Présentation Journée Oxford) - Oxford University Press, Juillet 2019",
+            certMacmillanTechEngAcq: "Technologie et Acquisition de la Langue Anglaise et Utilisation des Manuels dans la Classe d'Anglais du 21e Siècle (Atelier DP) - Macmillan Education & IHCI, Septembre 2019",
+            backToTop: "Haut de page",
+            ariaBackToTop: "Faire défiler vers le haut de la page",
+            prevSectionAria: "Section précédente",
+            nextSectionAria: "Section suivante",
+            goToSlideAria: "Aller à la diapositive",
+            copied: "Copié !",
+            noData: "Aucune question disponible.",
+            tooltipAAR: "AAR Corp. - Société de services aéronautiques",
             tooltipCRJ: "Canadair Regional Jet",
-            tooltipFAA: "Administración Federal de Aviación",
-            playIntroAudio: "Reproducir Audio de Introducción",
-            keywordPlaceholder: "Ingrese palabras clave para resaltar...",
-            keywordSearchBtn: "Resaltar",
-            toggleConciseMode: "Ver Resumen Conciso",
-            toggleFullMode: "Ver Resumen Completo",
-            ariaToggleConcise: "Alternar vista de resumen conciso",
-            exitConciseMode: "Salir del Modo Resumido",
-            ariaExitConciseMode: "Volver a la vista completa del currículum",
-            playVideoIntro: "Reproducir Video Intro",
-            ariaPlayVideoIntro: "Reproducir video de introducción",
-            generateFollowUp: "Sugerir Seguimiento",
-            ariaGenerateFollowUp: "Generar mensaje de seguimiento sugerido",
-            openQuiz: "Prueba Rápida de Habilidad",
-            ariaOpenQuiz: "Abrir prueba rápida de habilidad",
-            closeModalAria: "Cerrar modal",
-            videoIntroModalTitle: "Video Introducción",
-            followUpModalTitle: "Mensaje de Seguimiento Sugerido",
-            followUpModalDesc: "Basado en tu interacción con este currículum, aquí tienes un mensaje de seguimiento sugerido que puedes copiar o enviar:",
-            copyFollowUpBtn: "Copiar Texto",
-            sendEmailBtn: "Abrir en Cliente de Correo",
-            skillQuizModalTitle: "Prueba de Habilidad",
-            quizScoreLabel: "Puntaje: ",
-            quizNextBtn: "Siguiente",
-            quizResultsTitle: "¡Prueba Completada!",
+            tooltipFAA: "Federal Aviation Administration (Administration Fédérale de l'Aviation)",
+            playIntroAudio: "Lire l'introduction audio",
+            keywordPlaceholder: "Entrez des mots-clés à surligner...",
+            keywordSearchBtn: "Surligner",
+            toggleConciseMode: "Voir CV Concis",
+            toggleFullMode: "Voir CV Complet",
+            ariaToggleConcise: "Basculer la vue du CV concis",
+            exitConciseMode: "Quitter le Mode Concis",
+            ariaExitConciseMode: "Retourner à la vue complète du CV",
+            playVideoIntro: "Lire l'Intro Vidéo",
+            ariaPlayVideoIntro: "Lire l'introduction vidéo",
+            generateFollowUp: "Suggérer un Suivi",
+            ariaGenerateFollowUp: "Générer un message de suivi suggéré",
+            openQuiz: "Quiz Rapide",
+            ariaOpenQuiz: "Ouvrir le quiz rapide de compétences",
+            closeModalAria: "Fermer la modale",
+            videoIntroModalTitle: "Introduction Vidéo",
+            followUpModalTitle: "Message de Suivi Suggéré",
+            followUpModalDesc: "Basé sur votre interaction avec ce CV, voici un message de suivi suggéré que vous pouvez copier ou envoyer :",
+            copyFollowUpBtn: "Copier le Texte",
+            sendEmailBtn: "Ouvrir dans le Client E-mail",
+            skillQuizModalTitle: "Quiz de Compétences",
+            quizScoreLabel: "Résultats ",
+            quizNextBtn: "Suivant",
+            quizResultsTitle: "Quiz Terminé !",
             quizFinalScore: "-",
-            quizRestartBtn: "Reiniciar Prueba",
-            quizCloseBtnModal: "Cerrar",
-            skillDetailModalDefaultTitle: "Detalles de Habilidad",
-            skillDetailExperience: "Experiencia Relevante:",
-            skillDetailProjects: "Proyectos Relacionados:",
-            skillDetailTestimonials: "Témoignages:",
-            defaultError: "Ocurrió un error. Por favor, inténtalo de nuevo.",
+            quizRestartBtn: "Recommencer le Quiz",
+            quizCloseBtnModal: "Fermer",
+            skillDetailModalDefaultTitle: "Détails de la Compétence",
+            skillDetailExperience: "Expérience Pertinente :",
+            skillDetailProjects: "Projets Connexes :",
+            skillDetailTestimonials: "Témoignages :",
+            defaultError: "Une erreur est survenue. Veuillez réessayer.",
 
             quizQ1_fr: "Quelle phrase utilise correctement le subjonctif ?",
             quizQ1_opt1_fr: "Si j'étais riche, je voyagerais dans le monde.",
             quizQ1_opt2_fr: "Je souhaite que j'étais sur une plage maintenant.",
             quizQ1_opt3_fr: "Il est important qu'il soit à l'heure.",
             quizQ1_opt4_fr: "Il agit comme s'il est le patron.",
-            quizQ1_feedback_fr: "Le subjonctif est souvent utilisé pour des situations hypothétiques ou pour exprimer des souhaits, des ordres ou des suggestions. 'Soit' est la forme subjonctiva de 'être' dans ce contexte.",
+            quizQ1_feedback_fr: "Le subjonctif est souvent utilisé pour des situations hypothétiques ou pour exprimer des souhaits, des ordres ou des suggestions. 'Soit' est la forme subjonctif de 'être' dans ce contexte.",
             quizQ2_fr: "Identifiez la figure de style dans : 'Le vent murmurait à travers les arbres.'",
             quizQ2_opt1_fr: "Métaphore",
             quizQ2_opt2_fr: "Comparaison",
@@ -3763,7 +3783,7 @@
             tableGagneEvents: "Événements de Gagné",
             table5EModel: "Modèle 5E",
             tableDynamicLearning: "Système d'Apprentissage Dynamique",
-            tableEssentialLearning: "Proceso Esencial de Aprendizaje",
+            tableEssentialLearning: "Processus d'Apprentissage Essentiel",
             tableKeyConcepts: "Concepts Clés :",
             tableDescription: "Description :",
             tableStudentFocus: "Focus Étudiant :",
@@ -3794,24 +3814,24 @@
             elp1StudentFocus: "Expérimenter, Observer, Réagir, Être attentif",
             elp1TeacherFocus: "Instruction Directe, Susciter la Curiosité",
             elp2KeyConcepts: "Schéma, Liens, Organisation",
-            elp2Description: "Lier le nuevo aux connaissances existantes.",
+            elp2Description: "Lier le nouveau aux connaissances existantes.",
             elp2StudentFocus: "Connecter, Explorer, Questionner, Organiser",
             elp2TeacherFocus: "Relier, Guider la Pratique",
             elp3KeyConcepts: "Enquête, Découverte, Hypothèse",
             elp3Description: "Exploration active et formulation d'hypothèses.",
             elp3StudentFocus: "Explorer, Cartographier, Découvrir, Hypothétiser",
             elp3TeacherFocus: "Enquêter, Faciliter l'Exploration, Échafauder",
-            elp4KeyConcepts: "Síntesis, Interacción, Presentación",
+            elp4KeyConcepts: "Synthèse, Interaction, Présentation",
             elp4Description: "Partage et synthèse des connaissances par la communication.",
             elp4StudentFocus: "Communiquer, Synthétiser, Intégrer, Présenter",
             elp4TeacherFocus: "Présenter, Faciliter la Collaboration",
-            elp5KeyConcepts: "Application, Création, Experimentation",
+            elp5KeyConcepts: "Application, Création, Expérimentation",
             elp5Description: "Appliquer les connaissances dans des contextes réels et projets créatifs.",
             elp5StudentFocus: "Collaborer, Appliquer, Créer, Expérimenter",
             elp5TeacherFocus: "Appliquer, Fournir un Guidage, Étendre",
             elp6KeyConcepts: "Adaptation, Feedback, Raffinement",
             elp6Description: "Raffiner les compétences et connaissances par le feedback et la réflexion.",
-            elp6StudentFocus: "Adaptar, Raffiner, Évaluer, Estimer",
+            elp6StudentFocus: "Adapter, Raffiner, Évaluer, Estimer",
             elp6TeacherFocus: "Réfléchir, Fournir un Feedback, Échafauder",
             elp7KeyConcepts: "Optimisation, Automaticité, Transfert",
             elp7Description: "Atteindre la maîtrise et l'application stratégique des connaissances.",
@@ -3819,8 +3839,13 @@
             elp7TeacherFocus: "Stratégiser, Faciliter la Maîtrise",
             elp8KeyConcepts: "Innovation, Transcendance, Création",
             elp8Description: "Transcender les connaissances existantes pour créer des solutions novatrices.",
-            elp8StudentFocus: "Transformar, Innovar, Créer, Transcender",
-            elp8TeacherFocus: "Innovate, Faciliter l'Expertise"
+            elp8StudentFocus: "Transformer, Innover, Créer, Transcender",
+            elp8TeacherFocus: "Innover, Faciliter l'Expertise",
+
+            // === MODIFICATION START: Added translation for new button ===
+            viewPortfolio: "Voir le Portfolio TESOL",
+            ariaViewPortfolio: "Voir le Portfolio de Certification TESOL"
+            // === MODIFICATION END ===
         }
     };
 
@@ -3910,7 +3935,7 @@
                 description: "Compétent dans la conception de programmes d'études attrayants et efficaces pour la grammaire et la littérature, en accord avec les objectifs d'apprentissage et les besoins des étudiants.",
                 experience: [
                     "Développement et mise en œuvre actuels du programme de littérature et de grammaire anglaises pour les élèves de 7e et 8e année à l'Escuela Bilingüe Honduras.",
-                    "Adaptation et complément des programmes d'études ESL existants à l'IHCI et à l'Academia Europea pour mieux répondre aux besoins des étudiants locaux et à la disponibilidad des ressources.",
+                    "Adaptation et complément des programmes d'études ESL existants à l'IHCI et à l'Academia Europea pour mieux répondre aux besoins des étudiants locaux et à la disponibilité des ressources.",
                     "Amélioration continue des plans de cours pour l'enseignement en ligne sur la base des données de performance des étudiants et des commentaires (plus de 24 000 sessions)."
                 ],
                 certifications: [
@@ -3924,10 +3949,10 @@
                 description: "Application de principes de conception systématique pour créer des expériences d'apprentissage efficaces et engageantes, éclairées par les sciences cognitives et les théories de l'apprentissage des adultes.",
                 experience: [
                     "Utilisation d'approches d'apprentissage par tâches et par projets dans l'enseignement en ligne et en personne.",
-                    "Intégration de la tecnología y des stratégies multimodales pour répondre aux divers styles d'apprentissage.",
+                    "Intégration de la technologie et des stratégies multimodales pour répondre aux divers styles d'apprentissage.",
                     "Achèvement de nombreux parcours d'apprentissage LinkedIn sur la conception pédagogique, y compris l'analyse des besoins, les apprenants adultes et la CP Agile."
                 ],
-                methodologies: ["Apprentissage Basé sur les Tâches (TBLT)", "Apprentissage Basé sur les Projets (PBL)", "Étayage Cognitif (ZPD)", "Instruction Multimodale", "Événements d'Instruction de Gagne (étudié)", "Modèle SAM (étudié)", "Principios CUA (estudiado)"]
+                methodologies: ["Apprentissage Basé sur les Tâches (TBLT)", "Apprentissage Basé sur les Projets (PBL)", "Étayage Cognitif (ZPD)", "Instruction Multimodale", "Événements d'Instruction de Gagne (étudié)", "Modèle SAM (étudié)", "Principes CUA (étudié)"]
             }
         }
     };
