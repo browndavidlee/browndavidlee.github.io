@@ -249,8 +249,8 @@
             color: var(--sidebar-text);
         }
 
-        /* === MODIFICATION START: Added #viewPortfolioBtn to the selector list === */
-        #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn, #playVideoIntroBtn, #generateFollowUpBtn, #openQuizBtn, #viewPortfolioBtn {
+        /* === MODIFICATION START: Replaced #playVideoIntroBtn with #viewPromoVideosBtn === */
+        #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn, #viewPromoVideosBtn, #generateFollowUpBtn, #openQuizBtn, #viewPortfolioBtn {
             background: var(--sidebar-text);
             color: var(--primary);
             border: 1px solid var(--primary);
@@ -266,18 +266,18 @@
             will-change: transform, background-color, box-shadow;
         }
         #darkModeToggle:hover, #printResumeBtn:hover, #toggleConciseModeBtn:hover,
-        #playVideoIntroBtn:hover, #generateFollowUpBtn:hover, #openQuizBtn:hover, #viewPortfolioBtn:hover {
+        #viewPromoVideosBtn:hover, #generateFollowUpBtn:hover, #openQuizBtn:hover, #viewPortfolioBtn:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         #darkModeToggle:active, #printResumeBtn:active, #toggleConciseModeBtn:active,
-        #playVideoIntroBtn:active, #generateFollowUpBtn:active, #openQuizBtn:active, #viewPortfolioBtn:active {
+        #viewPromoVideosBtn:active, #generateFollowUpBtn:active, #openQuizBtn:active, #viewPortfolioBtn:active {
             transform: translateY(0px);
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
         }
 
         body.dark-mode #darkModeToggle, body.dark-mode #printResumeBtn, body.dark-mode #toggleConciseModeBtn,
-        body.dark-mode #playVideoIntroBtn, body.dark-mode #generateFollowUpBtn, body.dark-mode #openQuizBtn, body.dark-mode #viewPortfolioBtn {
+        body.dark-mode #viewPromoVideosBtn, body.dark-mode #generateFollowUpBtn, body.dark-mode #openQuizBtn, body.dark-mode #viewPortfolioBtn {
             background: var(--primary);
             color: var(--sidebar-text);
             border-color: var(--sidebar-text);
@@ -286,10 +286,10 @@
 
         #darkModeToggle { margin-bottom: 0.5rem; }
         #toggleConciseModeBtn { margin-bottom: 0.5rem; }
-        #playVideoIntroBtn { margin-bottom: 0.5rem; }
+        #viewPromoVideosBtn { margin-bottom: 0.5rem; } /* New button margin */
         #generateFollowUpBtn { margin-bottom: 0.5rem; }
-        #openQuizBtn { margin-bottom: 0.5rem; } /* Adjusted margin */
-        #viewPortfolioBtn { margin-bottom: 1.5rem; } /* New button margin */
+        #openQuizBtn { margin-bottom: 0.5rem; }
+        #viewPortfolioBtn { margin-bottom: 1.5rem; }
 
 
         .citizenship-tag {
@@ -1254,43 +1254,6 @@
             color: var(--text-primary);
         }
 
-
-        #videoIntroModal {
-            display: none;
-            position: fixed;
-            z-index: 10015;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        #videoIntroModal .modal-content {
-            margin: 5% auto;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            background-color: var(--container-bg);
-            position: relative;
-            border-radius: var(--card-border-radius);
-        }
-        #videoIntroModal .close-button {
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-            color: var(--text-secondary);
-            cursor: pointer;
-        }
-        #videoIntroModal iframe,
-        #videoIntroModal video {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border: none;
-        }
-
         #skillQuizModal {
             display: none;
             position: fixed;
@@ -1924,12 +1887,11 @@
             .language-switcher,
             .audio-play-button-container,
             #toggleConciseModeBtn,
-            #playVideoIntroBtn,
+            #viewPromoVideosBtn, /* === MODIFICATION: Added new button to hide on print === */
             #generateFollowUpBtn,
             #openQuizBtn,
             .skill-detail-modal,
             .keyword-highlighter-container,
-            #videoIntroModal,
             #skillQuizModal,
             #followUpModal,
             #exitConciseModeBtn,
@@ -2541,18 +2503,23 @@
             <button id="toggleConciseModeBtn" data-translate-key="toggleConciseMode" data-translate-key-aria="ariaToggleConcise">View Concise Resume</button>
             <button id="printResumeBtn" data-translate-key-aria="ariaPrintResume" aria-label="Print resume" data-translate-key="printResume">Print Resume</button>
 
-            <button id="playVideoIntroBtn" data-translate-key="playVideoIntro" data-translate-key-aria="ariaPlayVideoIntro">Play Video Intro</button>
+            <!-- === MODIFICATION START: Replaced video intro button with promo videos button === -->
+            <button id="viewPromoVideosBtn" 
+                    data-translate-key="viewPromoVideos" 
+                    data-translate-key-aria="ariaViewPromoVideos" 
+                    onclick="window.open('shorts.html', '_blank');">
+                Promo Videos
+            </button>
+            <!-- === MODIFICATION END === -->
+            
             <button id="generateFollowUpBtn" data-translate-key="generateFollowUp" data-translate-key-aria="ariaGenerateFollowUp">Suggest Follow-Up</button>
             <button id="openQuizBtn" data-translate-key="openQuiz" data-translate-key-aria="ariaOpenQuiz">Quick Skill Quiz</button>
-            
-            <!-- === MODIFICATION START: Added new button to link to portfolio === -->
             <button id="viewPortfolioBtn" 
                     data-translate-key="viewPortfolio" 
                     data-translate-key-aria="ariaViewPortfolio" 
                     onclick="window.open('index.html', '_blank');">
                 View TESOL Portfolio
             </button>
-            <!-- === MODIFICATION END === -->
 
 
             <section class="contact-section" aria-labelledby="contact-info-heading">
@@ -2750,13 +2717,11 @@
             <div id="skillDetailModalBody"></div>
         </div>
     </div>
-    <div id="videoIntroModal" class="modal" aria-modal="true" role="dialog" aria-labelledby="videoIntroModalTitle" style="display:none;">
-        <div class="modal-content">
-            <span class="close-button" data-translate-key-aria="closeModalAria" aria-label="Close modal">&times;</span>
-            <h3 id="videoIntroModalTitle" data-translate-key="videoIntroModalTitle">Video Introduction</h3>
-            <div id="videoPlayerContainer"></div>
-        </div>
-    </div>
+
+    <!-- === MODIFICATION START: Removed the videoIntroModal div === -->
+    <!-- The #videoIntroModal div has been deleted from here. -->
+    <!-- === MODIFICATION END === -->
+
     <div id="followUpModal" class="modal" aria-modal="true" role="dialog" aria-labelledby="followUpModalTitle" style="display:none;">
         <div class="modal-content">
             <span class="close-button" data-translate-key-aria="closeModalAria" aria-label="Close modal">&times;</span>
@@ -3017,14 +2982,11 @@
             ariaToggleConcise: "Toggle concise resume view",
             exitConciseMode: "Exit Concise Mode",
             ariaExitConciseMode: "Return to full resume view",
-            playVideoIntro: "Play Video Intro",
-            ariaPlayVideoIntro: "Play video introduction",
             generateFollowUp: "Suggest Follow-Up",
             ariaGenerateFollowUp: "Generate suggested follow-up message",
             openQuiz: "Quick Skill Quiz",
             ariaOpenQuiz: "Open quick skill quiz",
             closeModalAria: "Close modal",
-            videoIntroModalTitle: "Video Introduction",
             followUpModalTitle: "Suggested Follow-Up Message",
             followUpModalDesc: "Based on your interaction with this resume, here's a suggested follow-up message you can copy or send:",
             copyFollowUpBtn: "Copy Text",
@@ -3143,10 +3105,10 @@
             elp8StudentFocus: "Transform, Innovate, Create, Transcend",
             elp8TeacherFocus: "Innovate, Facilitate Expertise",
             
-            // === MODIFICATION START: Added translation for new button ===
             viewPortfolio: "View TESOL Portfolio",
-            ariaViewPortfolio: "View TESOL Certification Portfolio"
-            // === MODIFICATION END ===
+            ariaViewPortfolio: "View TESOL Certification Portfolio",
+            viewPromoVideos: "Promo Videos",
+            ariaViewPromoVideos: "View Promotional Videos"
         },
         es: {
             quizCorrectLabel: "Correcto",
@@ -3376,14 +3338,11 @@
             ariaToggleConcise: "Alternar vista de resumen conciso",
             exitConciseMode: "Salir del Modo Resumido",
             ariaExitConciseMode: "Volver a la vista completa del currículum",
-            playVideoIntro: "Reproducir Video Intro",
-            ariaPlayVideoIntro: "Reproducir video de introducción",
             generateFollowUp: "Sugerir Seguimiento",
             ariaGenerateFollowUp: "Generar mensaje de seguimiento sugerido",
             openQuiz: "Prueba Rápida de Habilidad",
             ariaOpenQuiz: "Abrir prueba rápida de habilidad",
             closeModalAria: "Cerrar modal",
-            videoIntroModalTitle: "Video Introducción",
             followUpModalTitle: "Mensaje de Seguimiento Sugerido",
             followUpModalDesc: "Basado en tu interacción con este currículum, aquí tienes un mensaje de seguimiento sugerido que puedes copiar o enviar:",
             copyFollowUpBtn: "Copiar Texto",
@@ -3494,10 +3453,10 @@
             elp8StudentFocus: "Transformar, Innovar, Crear, Trascender",
             elp8TeacherFocus: "Innovar, Facilitar Pericia",
 
-            // === MODIFICATION START: Added translation for new button ===
             viewPortfolio: "Ver Portafolio TESOL",
-            ariaViewPortfolio: "Ver Portafolio de Certificación TESOL"
-            // === MODIFICATION END ===
+            ariaViewPortfolio: "Ver Portafolio de Certificación TESOL",
+            viewPromoVideos: "Videos Promocionales",
+            ariaViewPromoVideos: "Ver Videos Promocionales"
         },
         fr: {
             quizCorrectLabel: "Correct",
@@ -3724,14 +3683,11 @@
             ariaToggleConcise: "Basculer la vue du CV concis",
             exitConciseMode: "Quitter le Mode Concis",
             ariaExitConciseMode: "Retourner à la vue complète du CV",
-            playVideoIntro: "Lire l'Intro Vidéo",
-            ariaPlayVideoIntro: "Lire l'introduction vidéo",
             generateFollowUp: "Suggérer un Suivi",
             ariaGenerateFollowUp: "Générer un message de suivi suggéré",
             openQuiz: "Quiz Rapide",
             ariaOpenQuiz: "Ouvrir le quiz rapide de compétences",
             closeModalAria: "Fermer la modale",
-            videoIntroModalTitle: "Introduction Vidéo",
             followUpModalTitle: "Message de Suivi Suggéré",
             followUpModalDesc: "Basé sur votre interaction avec ce CV, voici un message de suivi suggéré que vous pouvez copier ou envoyer :",
             copyFollowUpBtn: "Copier le Texte",
@@ -3842,10 +3798,10 @@
             elp8StudentFocus: "Transformer, Innover, Créer, Transcender",
             elp8TeacherFocus: "Innover, Faciliter l'Expertise",
 
-            // === MODIFICATION START: Added translation for new button ===
             viewPortfolio: "Voir le Portfolio TESOL",
-            ariaViewPortfolio: "Voir le Portfolio de Certification TESOL"
-            // === MODIFICATION END ===
+            ariaViewPortfolio: "Voir le Portfolio de Certification TESOL",
+            viewPromoVideos: "Vidéos Promotionnelles",
+            ariaViewPromoVideos: "Voir les Vidéos Promotionnelles"
         }
     };
 
@@ -4462,30 +4418,9 @@
         });
     }
 
-    function setupVideoIntroModal() {
-        const playBtn = document.getElementById('playVideoIntroBtn');
-        const videoModal = document.getElementById('videoIntroModal');
-        if (!playBtn || !videoModal) {
-            console.error("ERR_MODAL_005: Video intro button or modal not found.");
-            return;
-        }
-        const videoPlayerContainer = document.getElementById('videoPlayerContainer');
-        const closeBtn = videoModal.querySelector('.close-button');
-        if (!videoPlayerContainer || !closeBtn) {
-            console.error("ERR_MODAL_006: Video player container or close button for video modal not found.");
-            return;
-        }
-        const youtubeVideoId = 'dQw4w9WgXcQ'; // Example video ID
-
-        playBtn.addEventListener('click', () => {
-            videoPlayerContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            openModal('videoIntroModal');
-        });
-        closeBtn.onclick = () => {
-            videoPlayerContainer.innerHTML = '';
-            closeModal('videoIntroModal');
-        };
-    }
+    // === MODIFICATION START: Removed setupVideoIntroModal function ===
+    // The setupVideoIntroModal function has been deleted from here.
+    // === MODIFICATION END ===
 
     function setupFollowUpGenerator() {
         const generateBtn = document.getElementById('generateFollowUpBtn');
@@ -5847,7 +5782,6 @@
                         }
                     } else if (e.key === 'Escape') {
                         closeModal('skillDetailModal');
-                        closeModal('videoIntroModal');
                         closeModal('followUpModal');
                         closeModal('skillQuizModal');
                     }
@@ -5871,7 +5805,6 @@
                 setupSkillTagModals();
                 setupConciseMode();
                 setupKeywordHighlighter();
-                setupVideoIntroModal();
                 setupFollowUpGenerator();
                 setupSkillQuiz(); // This will now also cache the score display elements
 
@@ -5902,9 +5835,6 @@
             window.addEventListener('click', function(event) {
                 if (event.target.classList.contains('modal')) {
                     closeModal(event.target.id);
-                    if (event.target.id === 'videoIntroModal') {
-                         document.getElementById('videoPlayerContainer').innerHTML = '';
-                    }
                 }
             });
         } catch (e) {
