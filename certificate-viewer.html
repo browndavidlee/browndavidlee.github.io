@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESOL Certificate - David Lee Brown</title>
+    <style>
+        /* 
+          This viewer is designed to make downloading difficult for the average user.
+          It disables right-clicks and uses CSS to prevent easy image interaction.
+          Note: A determined user can still capture the screen. This is the strongest
+          protection available within a standard web browser.
+        */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #2a3b52; /* A dark, professional background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Hide scrollbars */
+        }
+        .certificate-container {
+            max-width: 95vw;
+            max-height: 95vh;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            /* Make it harder to select/drag the image */
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            /* This prevents right-click context menu on the image itself */
+            pointer-events: none; 
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <div class="certificate-container">
+        <!-- The certificate is displayed as an image to prevent direct PDF download -->
+        <img src="https://i.ibb.co/yW9g1gT/ASU-TESOL-CERTIFICATE.png" alt="ASU TESOL Certificate for David Lee Brown">
+    </div>
+
+    <script>
+        // Disable right-click context menu on the entire page
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable common keyboard shortcuts for saving and printing
+        document.addEventListener('keydown', function(e) {
+            // Disable Ctrl+S (or Cmd+S on Mac) for Save
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                alert('Saving this content is disabled.');
+            }
+            // Disable Ctrl+P (or Cmd+P on Mac) for Print
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                alert('Printing this content is disabled.');
+            }
+        });
+    </script>
+
+</body>
+</html>
