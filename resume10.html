@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en"> <!-- Default lang, will be updated by JS -->
 <head>
@@ -249,8 +250,8 @@
             color: var(--sidebar-text);
         }
 
-        /* === MODIFICATION START: Replaced #playVideoIntroBtn with #viewPromoVideosBtn === */
-        #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn, #viewPromoVideosBtn, #generateFollowUpBtn, #openQuizBtn, #viewPortfolioBtn {
+        /* === MODIFICATION START: Added #viewCertificateBtn to selectors === */
+        #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn, #viewPromoVideosBtn, #generateFollowUpBtn, #openQuizBtn, #viewPortfolioBtn, #viewCertificateBtn {
             background: var(--sidebar-text);
             color: var(--primary);
             border: 1px solid var(--primary);
@@ -266,18 +267,18 @@
             will-change: transform, background-color, box-shadow;
         }
         #darkModeToggle:hover, #printResumeBtn:hover, #toggleConciseModeBtn:hover,
-        #viewPromoVideosBtn:hover, #generateFollowUpBtn:hover, #openQuizBtn:hover, #viewPortfolioBtn:hover {
+        #viewPromoVideosBtn:hover, #generateFollowUpBtn:hover, #openQuizBtn:hover, #viewPortfolioBtn:hover, #viewCertificateBtn:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         #darkModeToggle:active, #printResumeBtn:active, #toggleConciseModeBtn:active,
-        #viewPromoVideosBtn:active, #generateFollowUpBtn:active, #openQuizBtn:active, #viewPortfolioBtn:active {
+        #viewPromoVideosBtn:active, #generateFollowUpBtn:active, #openQuizBtn:active, #viewPortfolioBtn:active, #viewCertificateBtn:active {
             transform: translateY(0px);
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
         }
 
         body.dark-mode #darkModeToggle, body.dark-mode #printResumeBtn, body.dark-mode #toggleConciseModeBtn,
-        body.dark-mode #viewPromoVideosBtn, body.dark-mode #generateFollowUpBtn, body.dark-mode #openQuizBtn, body.dark-mode #viewPortfolioBtn {
+        body.dark-mode #viewPromoVideosBtn, body.dark-mode #generateFollowUpBtn, body.dark-mode #openQuizBtn, body.dark-mode #viewPortfolioBtn, body.dark-mode #viewCertificateBtn {
             background: var(--primary);
             color: var(--sidebar-text);
             border-color: var(--sidebar-text);
@@ -289,7 +290,8 @@
         #viewPromoVideosBtn { margin-bottom: 0.5rem; } /* New button margin */
         #generateFollowUpBtn { margin-bottom: 0.5rem; }
         #openQuizBtn { margin-bottom: 0.5rem; }
-        #viewPortfolioBtn { margin-bottom: 1.5rem; }
+        #viewPortfolioBtn { margin-bottom: 0.5rem; } /* Adjusted margin */
+        #viewCertificateBtn { margin-bottom: 1.5rem; } /* New button margin */
 
 
         .citizenship-tag {
@@ -1874,6 +1876,7 @@
                 color: #000 !important;
                 font-family: 'Times New Roman', Times, serif !important;
             }
+            /* === MODIFICATION START: Added #viewCertificateBtn to print hide list === */
             #vanta-background-div,
             #readingProgressBar,
             #backToTopBtn,
@@ -1887,9 +1890,10 @@
             .language-switcher,
             .audio-play-button-container,
             #toggleConciseModeBtn,
-            #viewPromoVideosBtn, /* === MODIFICATION: Added new button to hide on print === */
+            #viewPromoVideosBtn,
             #generateFollowUpBtn,
             #openQuizBtn,
+            #viewCertificateBtn,
             .skill-detail-modal,
             .keyword-highlighter-container,
             #skillQuizModal,
@@ -1898,6 +1902,7 @@
             #leaflet-map /* Hide interactive map for print */ {
                 display: none !important;
             }
+            /* === MODIFICATION END === */
 
             .sidebar h1,
             .sidebar,
@@ -2503,14 +2508,12 @@
             <button id="toggleConciseModeBtn" data-translate-key="toggleConciseMode" data-translate-key-aria="ariaToggleConcise">View Concise Resume</button>
             <button id="printResumeBtn" data-translate-key-aria="ariaPrintResume" aria-label="Print resume" data-translate-key="printResume">Print Resume</button>
 
-            <!-- === MODIFICATION START: Replaced video intro button with promo videos button === -->
             <button id="viewPromoVideosBtn" 
                     data-translate-key="viewPromoVideos" 
                     data-translate-key-aria="ariaViewPromoVideos" 
                     onclick="window.open('shorts.html', '_blank');">
                 Promo Videos
             </button>
-            <!-- === MODIFICATION END === -->
             
             <button id="generateFollowUpBtn" data-translate-key="generateFollowUp" data-translate-key-aria="ariaGenerateFollowUp">Suggest Follow-Up</button>
             <button id="openQuizBtn" data-translate-key="openQuiz" data-translate-key-aria="ariaOpenQuiz">Quick Skill Quiz</button>
@@ -2520,6 +2523,14 @@
                     onclick="window.open('index.html', '_blank');">
                 View TESOL Portfolio
             </button>
+            <!-- === MODIFICATION START: Added new button for the certificate === -->
+            <button id="viewCertificateBtn" 
+                    data-translate-key="viewCertificate" 
+                    data-translate-key-aria="ariaViewCertificate" 
+                    onclick="window.open('certificate_viewer.html', '_blank', 'noopener,noreferrer');">
+                View TESOL Certificate
+            </button>
+            <!-- === MODIFICATION END === -->
 
 
             <section class="contact-section" aria-labelledby="contact-info-heading">
@@ -2588,7 +2599,7 @@
                     <li class="skill-tag" data-skill-key="skillPBL" data-category="teaching design" data-scroll-target-id="lessons-like-slide" data-translate-key="skillPBL">Project-Based Learning (PBL)</li>
                     <li class="skill-tag" data-skill-key="skillFormativeAssess" data-category="teaching design" data-scroll-target-id="lessons-like-slide" data-translate-key="skillFormativeAssess">Formative Assessment Design</li>
                     <li class="skill-tag" data-skill-key="skillCognitiveScaffold" data-category="teaching" data-scroll-target-id="lessons-like-slide" data-translate-key="skillCognitiveScaffold">Cognitive Scaffolding (ZPD)</li>
-                    <li class="skill-tag" data-skill-key="skillMultimodalInstruct" data-category="teaching design" data-scroll-target-id="lessons-like-slide" data-translate-key="skillMultimodalInstruct">Multimodal Instruction</li>
+                    <li class="skill-tag" data-skill-key="skillMultimodalInstruct">Multimodal Instruction</li>
                     <li class="skill-tag" data-skill-key="skillHolisticDev" data-category="teaching" data-scroll-target-id="lessons-like-slide" data-translate-key="skillHolisticDev">Holistic Learner Development</li>
                 </ul>
             </section>
@@ -2717,10 +2728,6 @@
             <div id="skillDetailModalBody"></div>
         </div>
     </div>
-
-    <!-- === MODIFICATION START: Removed the videoIntroModal div === -->
-    <!-- The #videoIntroModal div has been deleted from here. -->
-    <!-- === MODIFICATION END === -->
 
     <div id="followUpModal" class="modal" aria-modal="true" role="dialog" aria-labelledby="followUpModalTitle" style="display:none;">
         <div class="modal-content">
@@ -3108,7 +3115,11 @@
             viewPortfolio: "View TESOL Portfolio",
             ariaViewPortfolio: "View TESOL Certification Portfolio",
             viewPromoVideos: "Promo Videos",
-            ariaViewPromoVideos: "View Promotional Videos"
+            ariaViewPromoVideos: "View Promotional Videos",
+            // === MODIFICATION START: Added new translation keys for the certificate button ===
+            viewCertificate: "View TESOL Certificate",
+            ariaViewCertificate: "View TESOL Certificate in a secure viewer"
+            // === MODIFICATION END ===
         },
         es: {
             quizCorrectLabel: "Correcto",
@@ -3456,7 +3467,11 @@
             viewPortfolio: "Ver Portafolio TESOL",
             ariaViewPortfolio: "Ver Portafolio de Certificación TESOL",
             viewPromoVideos: "Videos Promocionales",
-            ariaViewPromoVideos: "Ver Videos Promocionales"
+            ariaViewPromoVideos: "Ver Videos Promocionales",
+            // === MODIFICATION START: Added new translation keys for the certificate button ===
+            viewCertificate: "Ver Certificado TESOL",
+            ariaViewCertificate: "Ver Certificado TESOL en un visor seguro"
+            // === MODIFICATION END ===
         },
         fr: {
             quizCorrectLabel: "Correct",
@@ -3801,7 +3816,11 @@
             viewPortfolio: "Voir le Portfolio TESOL",
             ariaViewPortfolio: "Voir le Portfolio de Certification TESOL",
             viewPromoVideos: "Vidéos Promotionnelles",
-            ariaViewPromoVideos: "Voir les Vidéos Promotionnelles"
+            ariaViewPromoVideos: "Voir les Vidéos Promotionnelles",
+            // === MODIFICATION START: Added new translation keys for the certificate button ===
+            viewCertificate: "Voir le Certificat TESOL",
+            ariaViewCertificate: "Voir le certificat TESOL dans un visualiseur sécurisé"
+            // === MODIFICATION END ===
         }
     };
 
@@ -4417,10 +4436,6 @@
             }
         });
     }
-
-    // === MODIFICATION START: Removed setupVideoIntroModal function ===
-    // The setupVideoIntroModal function has been deleted from here.
-    // === MODIFICATION END ===
 
     function setupFollowUpGenerator() {
         const generateBtn = document.getElementById('generateFollowUpBtn');
