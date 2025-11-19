@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     /* Background colors */
     --dawn-purple: #1a0d26; --sunrise-orange: #FF6B35; --sunrise-gold: #FFC627; --day-light-blue: #87CEEB; --day-blue: #4A90E2; --sunset-gold-bg: #FFC627; --sunset-orange: #E57300; --sunset-bright-orange: #FF8C42; --sunset-red-orange: #CC4125; --sunset-maroon-bg: #8C1D40; --sunset-deep-maroon: #7A1939; --sunset-crimson: #A0331F; --sunset-deep-purple: #2F1B3C; --night-purple: #1a0d26; --night-black-bg: #0a0612; --deep-black: #000000;
     --wave-highlight: rgba(255, 198, 39, 0.08); --wave-secondary: rgba(140, 29, 64, 0.06); --day-highlight: rgba(74, 144, 226, 0.05); --night-highlight: rgba(138, 43, 226, 0.03); --dawn-highlight: rgba(255, 107, 53, 0.04); --maroon-highlight: rgba(140, 29, 64, 0.08);
@@ -446,6 +446,29 @@ html[data-theme="dark"] .modal-glide-arrow:active { background: rgba(50, 50, 70,
 }
 
 @media (max-width: 768px) {
+/* --- START: Mobile Overlap Fixes --- */
+
+/* Creates a safe space at the top for the fixed buttons */
+body {
+    padding-top: 70px !important; 
+}
+
+/* Repositions the toggle buttons into the new safe space */
+.dark-mode-toggle {
+    top: 15px;
+    right: 15px;
+}
+
+.effects-toggle {
+    top: 15px;
+    right: 75px; /* Positioned to the left of the dark mode toggle */
+}
+
+#backToTopBtn {
+    bottom: 20px;
+    right: 20px;
+}
+/* --- END: Mobile Overlap Fixes --- */
     body { padding-top: 1rem; }
     .portfolio-container { margin: 1rem; padding: 1.5rem; border-radius: 12px; }
     
@@ -625,6 +648,29 @@ html.effects-off .portfolio-container {
 }
 
 @media (max-width: 768px) {
+/* --- START: Mobile Overlap Fixes --- */
+
+/* Creates a safe space at the top for the fixed buttons */
+body {
+    padding-top: 70px !important; 
+}
+
+/* Repositions the toggle buttons into the new safe space */
+.dark-mode-toggle {
+    top: 15px;
+    right: 15px;
+}
+
+.effects-toggle {
+    top: 15px;
+    right: 75px; /* Positioned to the left of the dark mode toggle */
+}
+
+#backToTopBtn {
+    bottom: 20px;
+    right: 20px;
+}
+/* --- END: Mobile Overlap Fixes --- */
     .effects-toggle {
         width: 40px; 
         height: 40px; 
