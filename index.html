@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Lee Brown - TESOL Portfolio</title>
+    
+    <!-- Google Fonts with Fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" 
+          rel="stylesheet" 
+          onerror="this.onerror=null;this.href='fallback-fonts.css';">
+    
+    <!-- Font Awesome CDN with Fallback -->
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" 
+          onerror="this.onerror=null;this.href='fontawesome-fallback.min.css';" />
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .portfolio-section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+    </style>     
+</head>
+<body>
+    <noscript>
+      <div style="background-color: #ffffe0; padding: 10px; text-align: center; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100000;">
+        This site requires JavaScript to function optimally. Please enable it in your browser for the best experience.
+      </div>
+    </noscript>
+
+    <div id="gradient-container">
+        <div id="gradient-pan-bg"></div>
+        <div id="wave-overlay-bg"></div>
+        <div id="atmosphere-layer"></div>
+    </div>
+    <div id="readingProgressBar"></div>
+
+    <button class="dark-mode-toggle" aria-label="Toggle theme">
+        <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <button id="effects-toggle-btn" class="effects-toggle" aria-label="Toggle visual effects">
+        <i class="fa-solid fa-wand-magic-sparkles icon-effects-on"></i>
+        <i class="fa-solid fa-eye-slash icon-effects-off"></i>
+    </button>
+
+
+    <div class="portfolio-container">
+        <!-- === MODIFICATION START: Header structure updated for flexbox layout === -->
+        <header class="portfolio-header">
+            <div class="header-text-content">
+                <h1>David Lee Brown</h1>
+                <p class="tagline">ASU Teach English Now Specialization Portfolio</p>
+            </div>
+            <a href="resume10.html" target="_blank" rel="noopener noreferrer" class="artifact-link resume-button">
+                View My Interactive Resume
+            </a>
+        </header>
+        <!-- === MODIFICATION END === -->
+
+        <section id="introduction" class="portfolio-section">
+            <h2>Welcome</h2>
+            <p>Welcome to my professional portfolio for the Arizona State University Teach English Now! TESOL Specialization. This collection showcases my understanding of TESOL methodologies, practical application in lesson planning, and reflections on my journey as an English language educator.</p>
+            <p>Here you will find examples of my work, including lesson plans, teaching demonstrations, and my evolving teaching philosophy, all aimed at fostering effective and engaging language learning environments.</p>
+
+            <div class="additional-welcome-content">
+                <p>My teaching journey began with my decision to share what I love. In developing countries, learning English can make the difference between success and poverty. It can open doors. Learning languages changes our brains for the better, promotes intercultural dialogue, and changes our perception of the world around us. I believe that the world would be a better place if people understood and respected cultural differences.</p>
+                
+                <div id="moreWelcomeText" class="collapsible-text" style="display: none;">
+                    <p>I am a native English speaker from Arkansas. My short-term goals are to connect with my students, understand their differences, plan according to their needs, set expectations, and establish a welcoming, content-rich, fun, and structured environment. My long-term goals consist of leading my students to become independent, persistent, self-controlled, curious, conscientious, gritty, and self-confident individuals. I want my students to meet the demands of employers looking for leadership, teamwork, problem-solving, and communication skills. Above all, I agree with Plutarch, who said, “A mind is not a vessel to be filled, but a fire to be kindled.” I want my students to fall in love with learning languages too.</p>
+                    <p>Like most modern teachers of English as a Second Language, I am experienced in the Communicative Approach (1980). I teach middle school, high school, and adult students. Delivering content-rich, authentic material is essential for cultivating communication in the context of problem-solving. Group and pair work, and the assignment of roles, are important in the formation of leadership and collaborative skill-building. I enjoy incorporating music, games, popular culture, and developmentally or personally interesting conversational topics. Drama, plays, and written or self-written dialogues are all parts of my methodologies. Authentic and relevant materials, combined with excellent delivery, keep students engaged. Successful schools continue to take the latest research on approaches into account. My methodologies reflect the breakthroughs in research and technology in ongoing education.</p>
+                    <p>Another approach that I use is the Comprehension Approach (1980). Techniques in this approach, such as role reversal and flipped classrooms, are interesting ways to demonstrate understanding according to the levels of understanding as outlined in Bloom’s Taxonomy (1956). Everything is built upon the past, which continues to offer helpful methods, such as the Direct Approach (1900) that introduced the concept that it is vital not to use the first language in the classroom. The Grammar Translation Approach, which requires direct translation, is not something that I use explicitly in my classroom. Providing rich visuals and audio stimuli without using the students' first language is a vital part of my presentations. Modern approaches, such as Task-based and Project-based learning, which allow for cognitive flexibility, support my skill-based philosophy. Ultimately, using a variety of multisensory approaches keeps students motivated and engaged.</p>
+                    <p>It starts with a hook. Marketing students learn that to capture the attention of the audience, they need to use ethos, logos, or pathos. Gaining the confidence of my students is a matter of persuasion. When lesson planning, I ask myself which techniques I can use to make the subject relatable, purposeful, and measurable. As students shuffle into the classroom, chatty from recess or lunch, I ask myself how I can capture their interest. It could be an interesting statement or quote on the board, a visual or projected image, music, or a do-now activity. Getting the students to routinely and quickly transition from procedural parts of the lesson allows for the best use of time. A short warm-up activity can set the tone for a great lesson. For example, a fun kinesthetic activity can make all the difference for Monday morning teenagers. When everyone feels connected and happy, their affective filter is lowered, and learning flourishes.</p>
+                    <p>I make sure that if a student does not know the answer, they don’t have the opportunity to opt out. For example, if a student says, "I don't know," I'll come back to them. I make sure that students are able to collaboratively build upon their understanding of the content through scaffolding techniques. Collective praise through stomps, claps, snaps, or applause is a great way to engage the class. Surveys using a show of one or two fingers are a great way to collect more information about student understanding. I interactively lecture for only 20 percent of the class time, and students are given guided and independent practice for the other 80 percent of the class. Throughout my lecture, I like to circulate, answer any questions, and check on student progress. Giving short, timed goals is a great way to keep groups on task. I maintain a positive attitude throughout my circulation. Discretely helping struggling learners and connecting with them can make all the difference in classroom management. Summative assessments are routinely planned throughout the grading periods (partials), and the process aims for student success.</p>
+                </div>
+                <button id="toggleWelcomeTextBtn" class="see-more-button" aria-expanded="false" aria-controls="moreWelcomeText">See More</button>
+            </div>
+
+        </section>
+
+        <section id="teaching-philosophy-main" class="portfolio-section">
+            <h2>Teaching Philosophy</h2>
+            <ul class="artifact-list single-column-artifact-list">
+                <li class="artifact-item">
+                    <strong>Teaching Philosophy</strong>
+                    <p class="description">Outlines a teaching purpose focused on guiding learners effectively through evidence-backed, technologically enhanced methodologies. Details a teaching style aligning constructivist approaches with Gagné’s Nine Events and cognitive science, emphasizing learner-centered, communicative, and holistic development with robust technology integration.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/01_Teaching_Philosophy.pdf" class="artifact-link" data-type="pdf" data-title="Teaching Philosophy" data-nav-sequence="1">View Philosophy</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="portfolio-artifacts" class="portfolio-section">
+            <h2>Portfolio Artifacts</h2>
+            
+            <h3>Lesson Plans</h3>
+            <ul class="artifact-list">
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">1 <span class="video-icon">🎬</span></div>
+                    <strong>Edited Reading/Writing Lesson Plan with Technology</strong>
+                    <p class="description">A lesson plan for analyzing Walt Whitman's "O Captain! My Captain!", focusing on historical context, vocabulary, extended metaphor, tone, and themes of loss and leadership. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/02_Edited_ReadingWriting_Lesson_Plan_with_Technology.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Edited Reading/Writing Lesson Plan with Technology"
+                           data-video-id="dsbReDyMrGE"
+                           data-transcript-path="transcripts/dsbReDyMrGE/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="2">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">2 <span class="video-icon">🎬</span></div>
+                    <strong>Technology-Enriched Reading/Writing Lesson Plan</strong>
+                    <p class="description">This technology-enriched lesson explores the life and writings of Frederick Douglass, focusing on biographical facts, understanding excerpts, analyzing literary techniques like author's voice and pathos, and writing an analytical paragraph on themes of freedom and education. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/03_Technology-Enriched_ReadingWriting_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Technology-Enriched Reading/Writing Lesson Plan"
+                           data-video-id="nGMI635yQ_0"
+                           data-transcript-path="transcripts/nGMI635yQ_0/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="3">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">3 <span class="video-icon">🎬</span></div>
+                    <strong>Edited Listening/Speaking Lesson Plan with Technology</strong>
+                    <p class="description">A lesson designed to boost interview confidence by understanding interviewer questions, practicing clear answers using the STAR method, sharpening listening skills, and learning to ask insightful questions. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/04_Edited_ListeningSpeaking_Lesson_Plan_with_Technology.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Edited Listening/Speaking Lesson Plan with Technology"
+                           data-video-id="GraFFrgs0Hc"
+                           data-transcript-path="transcripts/GraFFrgs0Hc/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="4">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">4 <span class="video-icon">🎬</span></div>
+                    <strong>Technology-Enriched Listening/Speaking Lesson Plan</strong>
+                    <p class="description">Focuses on confident communication in business settings, teaching key phrases for politely interrupting, disagreeing, and seeking clarification, with practice on intonation, stress, and role-playing scenarios. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/05_Technology-Enriched_ListeningSpeaking_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Technology-Enriched Listening/Speaking Lesson Plan"
+                           data-video-id="mwQSEbeJkeg"
+                           data-transcript-path="transcripts/mwQSEbeJkeg/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="5">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">5 <span class="video-icon">🎬</span></div>
+                    <strong>Grammar Lesson Plan</strong>
+                    <p class="description">Aimed at teaching the Simple Past tense for regular and common irregular verbs, using time sequencers (First, Then, Next, etc.), and optionally, writing a short paragraph about a past event. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/06_Grammar_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Grammar Lesson Plan"
+                           data-video-id="j0ObWd7gTA0"
+                           data-transcript-path="transcripts/j0ObWd7gTA0/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="6">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">6 <span class="video-icon">🎬</span></div>
+                    <strong>Pronunciation Lesson Plan</strong>
+                    <p class="description">Designed to help learners distinguish and clearly pronounce the vowel sounds /ɪ/ (as in 'ship') and /iː/ (as in 'sheep') using visuals, gestures, minimal pairs, and articulatory explanations. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/07_Pronunciation_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Pronunciation Lesson Plan"
+                           data-video-id="769lCa_2vzY"
+                           data-transcript-path="transcripts/769lCa_2vzY/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="7">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">7 <span class="video-icon">🎬</span></div>
+                    <strong>Capstone 1 Lesson Plan</strong>
+                    <p class="description">A lesson for 2nd graders to learn to spell and pronounce common action verbs using visuals, GIF images, TPR, and engaging games like Simon Says and Pictionary. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/08_Capstone_1_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Capstone 1 Lesson Plan"
+                           data-video-id="iCRM6tupMg8"
+                           data-transcript-path="transcripts/iCRM6tupMg8/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="8">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">8 <span class="video-icon">🎬</span></div>
+                    <strong>Original Reading/Writing/Grammar Lesson Plan</strong>
+                    <p class="description">Focuses on understanding and constructing argumentative paragraphs by identifying components (claim, thesis, evidence, rebuttal), and improving cohesion and flow through grammar (sequence adverbs, pronoun usage, avoiding dangling modifiers). </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/09_Original_ReadingWritingGrammar_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Original Reading/Writing/Grammar Lesson Plan"
+                           data-video-id="QPZvLniB7_E"
+                           data-transcript-path="transcripts/QPZvLniB7_E/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="9">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">9 <span class="video-icon">🎬</span></div>
+                    <strong>Original Listening/Speaking/Pronunciation Lesson Plan</strong>
+                    <p class="description">This lesson focuses on enhancing spontaneous conversational skills, particularly when discussing past experiences, with an emphasis on correct pronunciation of '-ed' endings. Students explore and strategize using conversation starters, including hypothetical questions, to initiate and sustain dialogue. The lesson incorporates personalized feedback and guided practice to help students refine their conversational abilities and build confidence for more natural interactions.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/10_Original_ListeningSpeakingPronunciation_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Original Listening/Speaking/Pronunciation Lesson Plan"
+                           data-video-id="azFEFr8DQ7g"
+                           data-transcript-path="transcripts/azFEFr8DQ7g/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="10">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <div class="artifact-number-badge">10 <span class="video-icon">🎬</span></div>
+                    <strong>Technology-Enriched Lesson Plan</strong>
+                    <p class="description">A pronunciation lesson focused on distinguishing and producing the voiceless /θ/ (think) and voiced /ð/ (this) 'TH' sounds accurately, covering mouth mechanics, spelling patterns, and self-monitoring. </p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/11_Technology-Enriched_Lesson_Plan.pdf"
+                           class="artifact-link"
+                           data-type="pdf"
+                           data-title="Technology-Enriched Lesson Plan"
+                           data-video-id="yK38I1v5q0M"
+                           data-transcript-path="transcripts/yK38I1v5q0M/"
+                           data-available-langs="en,ko,zh,ar"
+                           data-nav-sequence="11">View Artifact</a>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Toolbox Tips</h3>
+            <ul class="artifact-list">
+                <li class="artifact-item">
+                    <strong>Toolbox Tip 1</strong>
+                    <p class="description">An advanced activity for helping students understand and apply instructional stage theories (e.g., Gagné, 5E) by analyzing, comparing, and collaboratively creating lesson plans based on these stages.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/12_Toolbox_Tip_1.pdf" class="artifact-link" data-type="pdf" data-title="Toolbox Tip 1" data-nav-sequence="12">View Tip</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <strong>Toolbox Tip 2</strong>
+                    <p class="description">An intermediate level activity using rotating class stations to manage differing student abilities, where groups practice specific skills or content (e.g., different verb tenses) at each station.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/13_Toolbox_Tip_2.pdf" class="artifact-link" data-type="pdf" data-title="Toolbox Tip 2" data-nav-sequence="13">View Tip</a>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Required Identification</h3>
+            <ul class="artifact-list single-column-artifact-list">
+                <li class="artifact-item">
+                    <strong>Selfie with Photo ID</strong>
+                    <p class="description">A clear selfie including a visible, valid photo ID, as required for portfolio submission.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/14_Selfie_with_Photo_ID.jpg" class="artifact-link" data-type="image" data-title="Selfie with Photo ID" data-nav-sequence="14">View ID</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <h3>Optional</h3>
+            <ul class="artifact-list single-column-artifact-list">
+                <li class="artifact-item">
+                    <strong>One-Week Lesson Plan (OPTIONAL)</strong>
+                    <p class="description">A sample one-week lesson plan for 5th-grade English (adapted from Next Move 5), covering ordinal numbers, past tense, reading comprehension (blogs), writing blog entries, and discussing dates/culture.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/15_OPTIONAL_One-Week_Lesson_Plan.pdf" class="artifact-link" data-type="pdf" data-title="One-Week Lesson Plan (OPTIONAL)" data-nav-sequence="15">View Artifact</a>
+                    </div>
+                </li>
+                <li class="artifact-item">
+                    <strong>Toolbox Tip 3 (OPTIONAL)</strong>
+                    <p class="description">An activity titled 'Comparative Kinesthetics and Realia' for younger students to learn new vocabulary and comparatives (louder, faster, etc.) through active, noisy, kinesthetic engagement.</p>
+                    <div class="artifact-buttons">
+                        <a href="Standard Names/16_Toolbox_Tip_3_(Optional).pdf" class="artifact-link" data-type="pdf" data-title="Toolbox Tip 3 (OPTIONAL)" data-nav-sequence="16">View Tip</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="reflection" class="portfolio-section">
+            <h2>Final Reflection<img src="Images/cactus.png" alt="" class="reflection-cactus-decoration"></h2>
+            <p>My dream is to innovate in education, enhancing student learning through technology without distraction, and providing opportunities for learners to be successful. I look forward to working with individuals who share this vision of delivering the highest quality education that adapts to the needs of each learner. One day, I aspire to create my own educational platform, built upon evidence-based principles from instructional design and cognitive research, synthesizing various domains into a cohesive and modern framework.</p>
+        </section>
+    </div>
+
+    <button id="backToTopBtn" title="Go to top" aria-label="Scroll to top of page">
+        <svg class="icon icon-arrow-up" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <div id="artifactModal" class="modal">
+        <button id="modalPrevArtifact" class="modal-glide-arrow prev" aria-label="Previous artifact" title="Previous" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button id="modalNextArtifact" class="modal-glide-arrow next" aria-label="Next artifact" title="Next" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <div class="modal-content"> 
+            <span class="modal-close">×</span>
+
+            <div class="modal-header-container">
+                <h3 id="modalTitle">Artifact Title</h3>
+                <span id="modalArtifactNumbering" class="modal-artifact-numbering"></span>
+            </div>
+            
+            <p id="modalDescription" class="modal-artifact-description">Artifact description.</p>
+
+            <div class="modal-top-actions-bar">
+                <div class="modal-file-actions"> 
+                    <a id="modalDownloadLink" href="#" class="artifact-link" download>Download PDF</a>
+                    <a id="modalOpenNewTabLink" href="#" class="artifact-link" target="_blank">Open PDF in New Tab</a>
+                </div>
+                <div id="video-language-selector" class="modal-language-selector"> 
+                </div>
+            </div>
+
+            <div id="modalPdfImageEmbedContainer" class="modal-embed-container" style="display: none;">
+            </div>
+
+            <div id="modalVideoTranscriptPlayer" style="display: none;">
+                <div class="modal-video-transcript-layout">
+                    <div id="modal-video-container">
+                        <div id="portfolioModalVideoPlayer"></div> 
+                    </div>
+                    <div id="modal-transcript-container">
+                        <p>Select a language to load the transcript.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === MODIFICATION START: Added Disclosure Footer === -->
+    <footer class="portfolio-footer" style="text-align: center; padding: 4rem 1rem 2rem 1rem; color: var(--text-secondary-solid); font-size: 0.9em; opacity: 0.7;">
+        <p>
+            This portfolio website was developed with the assistance of AI-powered coding tools to professionally showcase the academic content. 
+            The process involved an iterative cycle of direction, editing, and integration over hundreds of refinements to build this interactive container. 
+            All core academic content, including the teaching philosophy, lesson plans, required parts according to the rubric, and reflections, is the original work of David Lee Brown.
+        </p>
+    </footer>
+    <!-- === MODIFICATION END === -->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

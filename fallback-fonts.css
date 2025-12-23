@@ -1,0 +1,92 @@
+/* fallback-fonts.css */
+
+/*
+ * This file provides fallback font stacks for when the primary Google Fonts
+ * (Lato and Playfair Display) fail to load. The goal is to maintain
+ * readability and a similar aesthetic using widely available system fonts.
+ */
+
+/*
+ * Fallback for Lato (Body Text)
+ * - system-ui: The default UI font on the current system.
+ * - -apple-system, BlinkMacSystemFont: For Apple devices (Safari, Chrome on macOS/iOS).
+ * - "Segoe UI": For Windows.
+ * - Roboto: A common Android font and a good general fallback.
+ * - "Helvetica Neue", Helvetica, Arial: Very common sans-serif fallbacks.
+ * - sans-serif: The browser's generic sans-serif.
+ */
+body,
+html,
+.tagline,
+.portfolio-section p,
+.portfolio-section ul:not(.artifact-list) li,
+.artifact-item .description,
+.modal p.modal-artifact-description,
+#modal-transcript-container,
+.see-more-button,
+.artifact-link,
+.dark-mode-toggle,
+#effects-toggle-btn,
+#backToTopBtn,
+.modal-language-selector button,
+.modal-artifact-numbering,
+.collapsible-text p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/*
+ * Fallback for Playfair Display (Headings & Display Text)
+ * - Georgia, Times, "Times New Roman": Classic, widely available serif fonts.
+ *   Georgia is often preferred for screen readability over Times.
+ * - serif: The browser's generic serif.
+ */
+h1, h2, h3, h4, h5, h6,
+.portfolio-header h1,
+.portfolio-section h2,
+.portfolio-section h3,
+.artifact-item strong,
+#modalTitle {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/*
+ * Specific weight adjustments if needed.
+ */
+.portfolio-header h1,
+.portfolio-section h2,
+.artifact-item strong,
+#modalTitle {
+    font-weight: 700; /* Ensure headings remain bold, matching Playfair's typical usage */
+}
+
+.tagline {
+    font-style: italic; /* Maintain italic style */
+}
+
+.artifact-link,
+.see-more-button,
+.dark-mode-toggle,
+#effects-toggle-btn,
+#backToTopBtn,
+.modal-language-selector button {
+    font-weight: 600; /* Approximate Lato's bold/semibold for buttons */
+}
+
+/* Default body font weight if Lato 400 was the primary */
+body,
+.portfolio-section p,
+.portfolio-section ul:not(.artifact-list) li,
+.artifact-item .description,
+.modal p.modal-artifact-description,
+#modal-transcript-container,
+.collapsible-text p {
+    font-weight: 400;
+}
+
+/* Specific Lato 300 usage if any (not explicitly seen, but for completeness) */
+/* Example: .some-lato-300-element { font-weight: 300; } */
+
+/* Specific Lato 700 usage (buttons already covered, this is for other text) */
+.portfolio-section h3 { /* Assuming h3 was Lato 700 */
+    font-weight: 700;
+}
