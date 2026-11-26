@@ -1603,48 +1603,7 @@
             }
         }
 
-            /* --- START: ULTIMATE RESET FOR SLIDE LISTS ON MOBILE --- */
-            .slide ul,
-            .slide section ul {
-                all: revert !important; /* Revert most properties to browser defaults or inherited */
-                display: block !important;
-                list-style-type: disc !important;
-                list-style-position: outside !important;
-                padding-left: 30px !important; /* Adjust for bullets */
-                margin: 1em 0 !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-
-            .slide ul > li,
-            .slide section ul > li {
-                all: revert !important;
-                display: list-item !important;
-                white-space: normal !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
-                margin-bottom: 0.5em !important;
-                width: auto !important; /* Let it be constrained by parent */
-                max-width: 100% !important;
-                box-sizing: border-box !important;
-            }
-
-            .slide ul > li *,
-            .slide section ul > li * { /* Any descendant */
-                all: revert !important;
-                display: inline !important; /* Force inline for children like strong/span */
-                white-space: normal !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
-                font-weight: inherit !important; /* Re-apply if needed, e.g., for strong */
-                color: inherit !important;
-            }
-            /* Re-apply strong styling if `all:revert` removed it */
-            .slide ul > li strong,
-            .slide section ul > li strong {
-                font-weight: bold !important;
-            }
-            /* --- END: ULTIMATE RESET FOR SLIDE LISTS ON MOBILE --- */
+            /* Removed broken un-scoped all:revert list reset; replaced with dark-mode-safe mobile CSS below */
 
         @keyframes slide-in-concise-exit {
             from {
@@ -2664,6 +2623,389 @@
             .carpeta-badge { border: 1px solid #666 !important; color: #000 !important; background: #fff !important; }
         }
 /* CARPETA-DOCENTE-2026-CSS-END */
+    /* MOBILE-COMPAT-FIX-CSS-START */
+        /* Global overflow & flex safety across all viewports */
+        *, *::before, *::after { box-sizing: border-box; }
+        .contact-item > div,
+        .contact-item a,
+        .exp-card-logo-row > div,
+        .carpeta-banner-entity > div,
+        .carpeta-summary-left,
+        .experience-flip-card-back .contact-info-item,
+        .experience-flip-card-back .contact-info-item a {
+            min-width: 0;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .keyword-highlighter-container input[type="text"],
+        #followUpModal textarea {
+            box-sizing: border-box;
+        }
+        #followUpModal .modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        #followUpModal .modal-actions button,
+        #followUpModal .modal-actions a {
+            margin-right: 0;
+            text-align: center;
+        }
+        .tooltip-trigger.tooltip-active .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+                overflow-x: clip;
+                padding-top: 0 !important;
+                margin: 0 !important;
+            }
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                min-height: auto !important;
+                display: block !important;
+                box-shadow: none !important;
+                animation: none !important;
+            }
+            /* Eliminate nested scroll traps so native touch scrolling is smooth */
+            .sidebar,
+            .main-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                overflow-y: visible !important;
+                overflow-x: hidden !important;
+            }
+            .sidebar {
+                padding: 1.25rem 1rem !important;
+            }
+            .language-switcher {
+                position: relative !important;
+                top: auto !important;
+                right: auto !important;
+                margin: 0.65rem auto 0.65rem auto !important;
+                width: fit-content !important;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                gap: 0.25rem;
+                font-size: 0.9rem !important;
+                padding: 0.45rem 0.75rem !important;
+            }
+            .language-switcher a {
+                padding: 0.35rem 0.6rem !important;
+                min-height: 36px;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            /* Fix Bug #1: Override JS inline 500% width and flex-basis on mobile */
+            .slides-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                flex-direction: column !important;
+                height: auto !important;
+                transform: none !important;
+                overflow: visible !important;
+            }
+            .slide {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                flex: 0 0 auto !important;
+                flex-basis: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 1rem 0.9rem !important;
+                margin-bottom: 0.75rem !important;
+                height: auto !important;
+                position: static !important;
+                transform: none !important;
+            }
+            .slide > h2,
+            .slide > p,
+            .slide > ul,
+            .slide section,
+            .slide section > p,
+            .slide section > ul,
+            .slide section h3 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                max-width: 100% !important;
+            }
+            .slide > h2 {
+                padding-top: 0.5rem !important;
+                font-size: 1.35rem !important;
+                letter-spacing: 0.6px !important;
+            }
+            /* Dark-mode-safe clean mobile slide lists (replaces broken all:revert) */
+            .slide ul,
+            .slide section ul {
+                padding-left: 1.25rem !important;
+                list-style-position: outside !important;
+                width: 100% !important;
+            }
+            .slide ul li,
+            .slide section ul li {
+                overflow-wrap: break-word;
+                word-break: break-word;
+                white-space: normal !important;
+                margin-bottom: 0.5rem;
+            }
+            #global-reach-slide .country-list {
+                padding-left: 0 !important;
+                list-style: none !important;
+            }
+
+            /* Fix Bug #4: Prevent negative-margin map divider horizontal bleed */
+            .slide .decorative-map-area {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+                height: 140px !important;
+                border-radius: 8px;
+            }
+            .slide .word-cloud-container {
+                padding: 0.5rem 0 !important;
+            }
+
+            /* Fix Bug #6: Comfortable mobile padding for main sections */
+            .main-content > section {
+                padding: 1.25rem 0.95rem !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .main-content > section > h2 {
+                font-size: 1.35rem !important;
+                padding-left: 1rem !important;
+                letter-spacing: 0.4px !important;
+            }
+
+            /* Fix Bug #7: Prevent keyword input overflow & iOS auto-zoom (<16px) */
+            .keyword-highlighter-container {
+                flex-direction: column !important;
+                align-items: stretch !important;
+                padding: 0.65rem !important;
+                gap: 0.5rem !important;
+                width: 100% !important;
+            }
+            .keyword-highlighter-container input[type="text"] {
+                width: 100% !important;
+                min-height: 44px !important;
+                font-size: 16px !important;
+                padding: 0.5rem 0.7rem !important;
+            }
+            .keyword-highlighter-container button {
+                width: 100% !important;
+                min-height: 42px !important;
+                font-size: 0.92rem !important;
+            }
+
+            /* Touch-friendly sidebar controls & brand chips */
+            .sidebar-brand-strip {
+                flex-wrap: wrap !important;
+                gap: 0.5rem !important;
+            }
+            .sidebar-brand-chip {
+                min-height: 40px !important;
+                padding: 0.3rem 0.7rem 0.3rem 0.3rem !important;
+                font-size: 0.78rem !important;
+            }
+            #darkModeToggle, #printResumeBtn, #toggleConciseModeBtn,
+            #viewPromoVideosBtn, #generateFollowUpBtn, #openQuizBtn,
+            #viewPortfolioBtn, #viewCertificateBtn, #viewIFICBtn, #jumpCarpetaBtn {
+                width: 100% !important;
+                max-width: 310px !important;
+                min-height: 44px !important;
+                font-size: 0.92rem !important;
+                padding: 0.6rem 0.9rem !important;
+            }
+            .skill-filter-btn {
+                min-height: 36px !important;
+                padding: 0.35rem 0.75rem !important;
+                font-size: 0.85rem !important;
+            }
+            .skill-tag {
+                padding: 0.4rem 0.75rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            /* Fix Bug #5: Experience cards comfortable padding & touch buttons */
+            .experience-flip-card-front,
+            .experience-flip-card-back {
+                padding: 1rem !important;
+            }
+            .flip-to-back-btn,
+            .flip-to-front-btn {
+                width: 100% !important;
+                min-height: 42px !important;
+                padding: 0.65rem 0.9rem !important;
+                font-size: 0.9rem !important;
+            }
+            .exp-card-logo-row {
+                align-items: flex-start !important;
+            }
+
+            /* Fix Bug #9: Mobile-safe tooltips that never clip off-screen */
+            .tooltip-text {
+                max-width: min(240px, 82vw) !important;
+                left: 0 !important;
+                transform: none !important;
+                bottom: 130% !important;
+            }
+            .tooltip-text::after {
+                left: 16px !important;
+                margin-left: 0 !important;
+            }
+
+            /* Fix Bug #10: Mobile-friendly Modals */
+            .skill-detail-modal-content,
+            #skillQuizModal .modal-content,
+            #followUpModal .modal-content {
+                width: 94% !important;
+                max-width: 94vw !important;
+                margin: 4vh auto !important;
+                padding: 16px !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+            #skillQuizModal .quiz-header {
+                padding-right: 2.2rem !important;
+                flex-wrap: wrap;
+                gap: 0.35rem;
+            }
+            #skillQuizModal .quiz-options button {
+                min-height: 44px !important;
+                font-size: 0.92rem !important;
+            }
+            #skillQuizModal .quiz-navigation button,
+            #skillQuizModal #quizRestartBtn,
+            #skillQuizModal #quizCloseBtn {
+                min-height: 42px !important;
+                padding: 0.55rem 1rem !important;
+            }
+            #followUpModal textarea {
+                font-size: 16px !important;
+                min-height: 180px !important;
+            }
+            #followUpModal .modal-actions button,
+            #followUpModal .modal-actions a {
+                flex: 1 1 140px;
+                min-height: 42px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Fix Bug #13: Tables & Carpeta Docente 2026 mobile ergonomics */
+            .instructional-stages-table-wrapper,
+            .carpeta-table-wrap {
+                -webkit-overflow-scrolling: touch;
+                max-width: 100%;
+                border-radius: 6px;
+            }
+            .instructional-stages-table {
+                font-size: 12px !important;
+            }
+            .carpeta-dual-banner {
+                padding: 0.75rem !important;
+                gap: 0.65rem !important;
+            }
+            .carpeta-logo-img {
+                width: 48px !important;
+                height: 48px !important;
+            }
+            .carpeta-logo-img.sm {
+                width: 38px !important;
+                height: 38px !important;
+            }
+            .carpeta-folder-tile {
+                min-height: 44px !important;
+                padding: 0.55rem 0.7rem !important;
+                font-size: 0.84rem !important;
+            }
+            .carpeta-tool-btn,
+            .carpeta-jump-btn {
+                min-height: 40px !important;
+                padding: 0.48rem 0.78rem !important;
+                font-size: 0.83rem !important;
+            }
+            .carpeta-card > summary {
+                padding: 0.78rem 0.85rem !important;
+                font-size: 0.9rem !important;
+            }
+            .carpeta-card-body {
+                padding: 0.8rem 0.85rem !important;
+                font-size: 0.89rem !important;
+            }
+            .carpeta-doc-box {
+                padding: 0.78rem 0.82rem !important;
+            }
+            .carpeta-table {
+                font-size: 0.8rem !important;
+            }
+            .carpeta-table th,
+            .carpeta-table td {
+                padding: 0.42rem 0.48rem !important;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
+            /* Fix Bug #12: Toast & BackToTop separation */
+            #backToTopBtn {
+                bottom: 14px !important;
+                right: 14px !important;
+                width: 44px;
+                height: 44px;
+                padding: 0 !important;
+                display: none;
+                align-items: center;
+                justify-content: center;
+            }
+            #archivePathToast {
+                bottom: 4.5rem !important;
+                width: calc(100vw - 1.5rem) !important;
+                max-width: 96vw !important;
+                font-size: 0.82rem !important;
+            }
+            #leaflet-map {
+                height: 290px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content > section {
+                padding: 1rem 0.7rem !important;
+            }
+            .slide {
+                padding: 0.85rem 0.7rem !important;
+            }
+            .carpeta-card-body {
+                padding: 0.7rem 0.7rem !important;
+            }
+            .carpeta-toolbar {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .carpeta-toolbar .carpeta-tool-btn {
+                justify-content: center;
+                text-align: center;
+            }
+            #leaflet-map {
+                height: 250px !important;
+            }
+        }
+/* MOBILE-COMPAT-FIX-CSS-END */
     </style>
 </head>
 <body>
@@ -5372,6 +5714,9 @@
             link.classList.toggle('active-lang', link.dataset.lang === lang);
         });
         applyTranslations(); // This will now also trigger map translation updates
+// MOBILE-COMPAT-FIX-LANG-START
+        setTimeout(() => { if (typeof window.refreshMobileLayout === 'function') window.refreshMobileLayout(); }, 60);
+// MOBILE-COMPAT-FIX-LANG-END
         const quizModal = document.getElementById('skillQuizModal');
         if (quizModal && quizModal.style.display === 'block') {
             // console.log("LOG_QUIZ: Language changed while quiz open. Restarting quiz.");
@@ -5412,6 +5757,16 @@
     }
 
     function initVantaBackground() {
+// MOBILE-COMPAT-FIX-VANTA-START
+        if (window.innerWidth <= 768) {
+            if (vantaEffect && typeof vantaEffect.destroy === 'function') {
+                vantaEffect.destroy();
+                vantaEffect = null;
+            }
+            document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light-bg').trim();
+            return;
+        }
+// MOBILE-COMPAT-FIX-VANTA-END
         if (typeof VANTA !== 'undefined' && VANTA.WAVES) {
             const isDarkMode = document.body.classList.contains('dark-mode');
             const vantaOptions = {
@@ -5653,6 +6008,9 @@
 
     function setupSkillQuiz() {
         const openBtn = document.getElementById('openQuizBtn');
+// MOBILE-COMPAT-FIX-LANG-START
+        setTimeout(() => { if (typeof window.refreshMobileLayout === 'function') window.refreshMobileLayout(); }, 60);
+// MOBILE-COMPAT-FIX-LANG-END
         const quizModal = document.getElementById('skillQuizModal');
         const primaryCloseBtn = document.getElementById('skillQuizModalPrimaryClose');
         const nextBtn = document.getElementById('quizNextBtn');
@@ -6102,35 +6460,23 @@
                 const isMobile = window.innerWidth <= 768;
                 const isConcise = document.body.classList.contains('concise-mode');
 
-                let scrollableElement = document.documentElement;
-                let currentScrollY = window.scrollY;
+                let currentScrollY = window.scrollY || document.documentElement.scrollTop || 0;
                 let clientHeight = window.innerHeight;
                 let scrollableHeight = document.documentElement.scrollHeight - clientHeight;
 
-                if (isConcise || isMobile) {
-                    // Mobile or Concise: slides are stacked or not primary scroll context.
-                    // mainContentElGlobal is likely the scroller.
-                    if (mainContentElGlobal && mainContentElGlobal.scrollHeight > mainContentElGlobal.clientHeight) {
-                        scrollableElement = mainContentElGlobal;
-                        currentScrollY = mainContentElGlobal.scrollTop;
-                        clientHeight = mainContentElGlobal.clientHeight;
-                        scrollableHeight = mainContentElGlobal.scrollHeight - clientHeight;
-                    }
-                } else { // Desktop, non-concise
+                if (!isMobile && !isConcise) {
                     const currentVisibleSlide = (slidesNodeList && slidesNodeList.length > currentSlide) ? slidesNodeList[currentSlide] : null;
-                    if (currentVisibleSlide && currentVisibleSlide.scrollHeight > currentVisibleSlide.clientHeight) {
-                        scrollableElement = currentVisibleSlide;
+                    if (currentVisibleSlide && currentVisibleSlide.scrollHeight > currentVisibleSlide.clientHeight + 4) {
                         currentScrollY = currentVisibleSlide.scrollTop;
                         clientHeight = currentVisibleSlide.clientHeight;
                         scrollableHeight = currentVisibleSlide.scrollHeight - clientHeight;
-                    } else if (mainContentElGlobal && mainContentElGlobal.scrollHeight > mainContentElGlobal.clientHeight && (!currentVisibleSlide || currentSlide === 0)) {
-                        scrollableElement = mainContentElGlobal;
+                    } else if (mainContentElGlobal && mainContentElGlobal.scrollHeight > mainContentElGlobal.clientHeight + 4 && (!currentVisibleSlide || currentSlide === 0)) {
                         currentScrollY = mainContentElGlobal.scrollTop;
                         clientHeight = mainContentElGlobal.clientHeight;
                         scrollableHeight = mainContentElGlobal.scrollHeight - clientHeight;
                     }
                 }
-                readingProgressBar.style.width = (scrollableHeight > 0) ? `${(currentScrollY / scrollableHeight) * 100}%` : '0%';
+                readingProgressBar.style.width = (scrollableHeight > 0) ? `${Math.min(100, Math.max(0, (currentScrollY / scrollableHeight) * 100))}%` : '0%';
             };
             window.addEventListener('scroll', updateReadingProgress, true);
             if(mainContentElGlobal) mainContentElGlobal.addEventListener('scroll', updateReadingProgress);
@@ -6323,23 +6669,17 @@
                     if (!backToTopButton) return;
                     const isMobile = window.innerWidth <= 768;
                     const isConcise = document.body.classList.contains('concise-mode');
-                    let currentScrollY = window.scrollY; // Default to window scrollY
+                    let currentScrollY = window.scrollY || document.documentElement.scrollTop || 0;
 
-                    if (isConcise || isMobile) {
-                        if (mainContentElGlobal && mainContentElGlobal.scrollTop > 0) {
-                             currentScrollY = mainContentElGlobal.scrollTop;
-                        } else if (!mainContentElGlobal) { // Fallback if mainContentElGlobal is not the scroller
-                            currentScrollY = window.scrollY;
-                        }
-                    } else { // Desktop, non-concise
+                    if (!isMobile && !isConcise) {
                         const currentVisibleSlide = (slidesNodeList && slidesNodeList.length > currentSlide) ? slidesNodeList[currentSlide] : null;
-                        if (currentVisibleSlide && currentVisibleSlide.scrollHeight > currentVisibleSlide.clientHeight) {
+                        if (currentVisibleSlide && currentVisibleSlide.scrollHeight > currentVisibleSlide.clientHeight + 4) {
                             currentScrollY = currentVisibleSlide.scrollTop;
                         } else if (mainContentElGlobal && mainContentElGlobal.scrollTop > 0 && (!currentVisibleSlide || currentSlide === 0)) {
                             currentScrollY = mainContentElGlobal.scrollTop;
                         }
                     }
-                    backToTopButton.style.display = (currentScrollY > 300) ? 'block' : 'none';
+                    backToTopButton.style.display = (currentScrollY > 300) ? (isMobile ? 'flex' : 'block') : 'none';
                 };
                 window.addEventListener('scroll', updateBackToTopVisibility, true);
                 if(mainContentElGlobal) mainContentElGlobal.addEventListener('scroll', updateBackToTopVisibility);
@@ -6377,14 +6717,18 @@
                     const back = inner.querySelector('.experience-flip-card-back');
 
                     if (front && back) {
-                        const frontOriginalDisplay = front.style.display;
-                        const backOriginalDisplay = back.style.display;
+                        const prevFrontH = front.style.height;
+                        const prevBackH = back.style.height;
                         front.style.display = 'flex';
                         back.style.display = 'flex';
+                        front.style.height = 'auto';
+                        back.style.height = 'auto';
 
                         const frontHeight = front.scrollHeight;
                         const backHeight = back.scrollHeight;
-                        flipper.style.height = `${Math.max(frontHeight, backHeight)}px`;
+                        flipper.style.height = `${Math.max(frontHeight, backHeight) + 12}px`;
+                        front.style.height = prevFrontH || '100%';
+                        back.style.height = prevBackH || '100%';
                     }
                 });
             }
@@ -6847,12 +7191,18 @@
                         if (leafletMap) leafletMap.invalidateSize();
                     } else if (isMobile) {
                         // Mobile, non-concise: stack all slides
-                        if (slidesContainerEl) slidesContainerEl.style.transform = 'none';
+                        if (slidesContainerEl) { slidesContainerEl.style.transform = 'none'; slidesContainerEl.style.width = '100%'; }
                         if (slidesNodeList) {
                             slidesNodeList.forEach((slide, index) => {
-                                slide.style.display = 'flex'; // Ensure all are visible
-                                slide.setAttribute('aria-hidden', 'false'); // All are visible
+                                slide.style.display = 'flex';
+                                slide.style.width = '100%';
+                                slide.style.flexBasis = 'auto';
+                                slide.setAttribute('aria-hidden', 'false');
                             });
+                        }
+                        if (!leafletMap && typeof initializeLeafletMap === 'function') {
+                            initializeLeafletMap();
+                            setTimeout(() => { if (leafletMap) leafletMap.invalidateSize(); }, 350);
                         }
                         // Arrows/dots are hidden by CSS. JS functions for them will bail out or hide them.
                     } else {
@@ -6864,6 +7214,13 @@
                             });
                         }
                         if (slidesContainerEl) {
+                             slidesContainerEl.style.width = `${totalSlides * 100}%`;
+                             if (slidesNodeList) {
+                                 slidesNodeList.forEach(s => {
+                                     s.style.flexBasis = `calc(100% / ${totalSlides})`;
+                                     s.style.width = `calc(100% / ${totalSlides})`;
+                                 });
+                             }
                              const slideWidthPercentage = 100 / totalSlides;
                              slidesContainerEl.style.transform = `translateX(-${currentSlide * slideWidthPercentage}%)`;
                         }
@@ -7032,6 +7389,57 @@
                     return true;
                 };
 // CARPETA-DOCENTE-2026-NAV-END
+// MOBILE-COMPAT-FIX-JS-START
+                window.refreshMobileLayout = function() {
+                    if (typeof setExperienceCardHeights === 'function') setExperienceCardHeights();
+                    if (typeof updateSlidePosition === 'function') updateSlidePosition();
+                    if (leafletMap) leafletMap.invalidateSize();
+                };
+
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(() => {
+                        setTimeout(() => window.refreshMobileLayout(), 100);
+                    });
+                }
+                setTimeout(() => window.refreshMobileLayout(), 350);
+
+                let lastWasMobile = window.innerWidth <= 768;
+                window.addEventListener('orientationchange', () => {
+                    setTimeout(() => window.refreshMobileLayout(), 220);
+                });
+                window.addEventListener('resize', () => {
+                    const nowMobile = window.innerWidth <= 768;
+                    if (nowMobile !== lastWasMobile) {
+                        lastWasMobile = nowMobile;
+                        if (typeof initVantaBackground === 'function') initVantaBackground();
+                        setTimeout(() => window.refreshMobileLayout(), 120);
+                    }
+                });
+
+                // Fix #9: Touch-friendly tooltip toggle + viewport edge clamping
+                document.addEventListener('click', (ev) => {
+                    const trigger = ev.target && ev.target.closest ? ev.target.closest('.tooltip-trigger') : null;
+                    document.querySelectorAll('.tooltip-trigger.tooltip-active').forEach(el => {
+                        if (el !== trigger) el.classList.remove('tooltip-active');
+                    });
+                    if (trigger && window.innerWidth <= 768) {
+                        ev.stopPropagation();
+                        const nowActive = trigger.classList.toggle('tooltip-active');
+                        if (nowActive) {
+                            const tip = trigger.querySelector('.tooltip-text');
+                            if (tip) {
+                                tip.style.left = '0px';
+                                tip.style.right = 'auto';
+                                const r = tip.getBoundingClientRect();
+                                if (r.right > window.innerWidth - 10) {
+                                    tip.style.left = 'auto';
+                                    tip.style.right = '0px';
+                                }
+                            }
+                        }
+                    }
+                });
+// MOBILE-COMPAT-FIX-JS-END
                 handleMobileTouch();
 
                 const langSwitcherLinks = document.querySelectorAll('.language-switcher a');
